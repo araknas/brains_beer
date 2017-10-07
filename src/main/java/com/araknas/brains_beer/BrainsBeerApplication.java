@@ -21,6 +21,7 @@ public class BrainsBeerApplication extends Application {
 
 	@Override
 	public void init() throws Exception {
+		// Test changes
 		springContext = SpringApplication.run(BrainsBeerApplication.class);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/sample.fxml"));
 		fxmlLoader.setControllerFactory(springContext::getBean);
