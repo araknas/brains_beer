@@ -22,7 +22,7 @@ public class BrainsBeerApplication extends Application {
 	public void init() throws Exception {
 		// Test changes
 		springContext = SpringApplication.run(BrainsBeerApplication.class);
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/sample.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/TeamsWindow.fxml"));
 		fxmlLoader.setControllerFactory(springContext::getBean);
 		root = fxmlLoader.load();
 	}
@@ -30,7 +30,7 @@ public class BrainsBeerApplication extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		primaryStage.setTitle("Hello World");
-		Scene scene = new Scene(root, 800, 600);
+		Scene scene = new Scene(root, 600, 400);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
