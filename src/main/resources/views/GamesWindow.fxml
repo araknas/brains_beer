@@ -13,11 +13,11 @@
 <?import javafx.scene.text.Font?>
 
 <SplitPane dividerPositions="0.15" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1"
-        fx:controller="com.araknas.brains_beer.controllers.TeamsWindowController">
+        fx:controller="com.araknas.brains_beer.controllers.GamesWindowController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="21.0" prefWidth="598.0">
          <children>
-            <Label fx:id="teamWindowName" layoutX="218.0" layoutY="7.0" text="KOMANDOS">
+            <Label fx:id="teamWindowName" layoutX="237.0" layoutY="7.0" text="ŽAIDIMAI">
                <font>
                   <Font size="29.0" />
                </font>
@@ -47,20 +47,20 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label fx:id="teamNameLabel" text="Pavadinimas" GridPane.valignment="TOP">
+                        <Label fx:id="gameNameLabel" text="Žaidimas" GridPane.valignment="TOP">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </Label>
-                        <Label fx:id="membersCountLabel" text="Narių skaičius" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                        <Label fx:id="gameDescriptionLabel" text="Aprašymas" GridPane.rowIndex="1" GridPane.valignment="TOP">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="teamNameField" GridPane.columnIndex="1" GridPane.valignment="TOP" />
-                        <TextField fx:id="membersCountField" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP" />
-                        <Button fx:id="addTeamButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" text="Pridėti" GridPane.rowIndex="2" GridPane.valignment="TOP" />
-                        <Button fx:id="deleteTeamButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" text="Ištrinti" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                        <TextField fx:id="gameNameField" GridPane.columnIndex="1" GridPane.valignment="TOP" />
+                        <TextField fx:id="gameDescriptionField" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                        <Button fx:id="addGameButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" text="Pridėti" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                        <Button fx:id="deleteGameButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" text="Ištrinti" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
                      </children>
                      <padding>
                         <Insets right="20.0" />
@@ -75,15 +75,15 @@
                       <RowConstraints maxHeight="77.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <ListView fx:id="teamsListView" prefHeight="172.0" prefWidth="259.0" />
+                        <ListView fx:id="gamesListView" prefHeight="172.0" prefWidth="259.0" />
                      </children>
                      <padding>
                         <Insets left="20.0" />
                      </padding>
                   </GridPane>
-                  <Button fx:id="teamWindowNextButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Pirmyn" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP"
-                          onAction="#handleTeamWindowNextButtonClick"/>
-                  <Button fx:id="teamWindowBackButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Atgal" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                  <Button fx:id="gameWindowNextButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Pirmyn" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                  <Button fx:id="gameWindowBackButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Atgal" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP"
+                          onAction="#handleGameWindowBackButtonClick"/>
                </children>
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
