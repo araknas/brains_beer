@@ -19,16 +19,20 @@ public class GamesWindowController {
     @Autowired
     ConfigurableApplicationContext springContext;
 
+    @Autowired
+    TeamsWindowController teamsWindowController;
+
     @FXML
     Button gameWindowBackButton;
 
-    Stage gamesWindowStage;
+    private Stage gamesWindowStage;
 
     public void handleGameWindowBackButtonClick(){
-        hideGameWindow();
+        hideGamesWindow();
+        teamsWindowController.displayTeamsWindow();
     }
 
-    public void displayGameWindow(){
+    public void displayGamesWindow(){
         try {
             if(gamesWindowStage != null && !gamesWindowStage.isShowing()){
                 gamesWindowStage.show();
@@ -43,7 +47,7 @@ public class GamesWindowController {
         }
     }
 
-    public void hideGameWindow(){
+    public void hideGamesWindow(){
         try {
             if(gamesWindowStage != null && gamesWindowStage.isShowing()){
                 gamesWindowStage.hide();

@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -15,7 +16,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class BrainsBeerApplication extends Application {
 
 	private ConfigurableApplicationContext springContext;
-	private Parent root;
+	private TeamsWindowController teamsWindowController;
 
 	public static void main(String[] args) {
 		launch(BrainsBeerApplication.class, args);
@@ -23,19 +24,14 @@ public class BrainsBeerApplication extends Application {
 
 	@Override
 	public void init() throws Exception {
-		// Test changes
 		springContext = SpringApplication.run(BrainsBeerApplication.class);
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/TeamsWindow.fxml"));
-		fxmlLoader.setControllerFactory(springContext::getBean);
-		root = fxmlLoader.load();
 	}
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		primaryStage.setTitle("Hello World");
-		Scene scene = new Scene(root, 600, 400);
-		primaryStage.setScene(scene);
-		primaryStage.show();
+
+		teamsWindowController = (TeamsWindowController) springContext.getBean("teamsWindowController");
+		teamsWindowController.displayTeamsWindow();
 	}
 
 	@Override

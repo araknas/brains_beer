@@ -25,13 +25,14 @@ public class TeamsWindowController {
     @FXML
     Button teamWindowNextButton;
 
-    Stage teamsWindowStage;
+    private Stage teamsWindowStage;
 
     public void handleTeamWindowNextButtonClick(){
-        gamesWindowController.displayGameWindow();
+        this.hideTeamsWindow();
+        gamesWindowController.displayGamesWindow();
     }
 
-    public void displayGameWindow(){
+    public void displayTeamsWindow(){
         try {
             if(teamsWindowStage != null && !teamsWindowStage.isShowing()){
                 teamsWindowStage.show();
@@ -46,7 +47,7 @@ public class TeamsWindowController {
         }
     }
 
-    public void hideGameWindow(){
+    public void hideTeamsWindow(){
         try {
             if(teamsWindowStage != null && teamsWindowStage.isShowing()){
                 teamsWindowStage.hide();
@@ -65,7 +66,7 @@ public class TeamsWindowController {
         Parent gamesWindowParent = fxmlLoader.load();
 
         teamsWindowStage = new Stage();
-        teamsWindowStage.setTitle("Games Window");
+        teamsWindowStage.setTitle("Teams Window");
         teamsWindowStage.setScene(new Scene(gamesWindowParent));
         teamsWindowStage.show();
     }
