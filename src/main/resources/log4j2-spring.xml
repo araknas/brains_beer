@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="60">
+    <Properties>
+        <Property name="log-path">brains_beer_logs</Property>
+        <Property name="log-pattern">[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</Property>
+    </Properties>
+
+    <!-- *****************  APPENDERS  *********************** -->
+    <Appenders>
+
+        <Console name="Console-Appender" target="SYSTEM_OUT">
+            <PatternLayout>
+                <pattern>
+                    ${log-pattern}
+                </pattern>
+            </PatternLayout>
+        </Console>
+
+        <RollingFile  name="brainsBeerAppender" fileName="${log-path}/brainsBeer.log"
+                      filePattern="${log-path}/brainsBeer-%d{yyyy-MM-dd}-%i.log" >
+            <PatternLayout>
+                <Pattern>
+                    ${log-pattern}
+                </Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="20 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max ="9">
+                <Delete basePath="${log-path}" maxDepth="2">
+                    <IfLastModified age="10d" />
+                    <IfFileName glob="brainsBeer-*.log" />
+                </Delete>
+            </DefaultRolloverStrategy>
+
+        </RollingFile>
+    </Appenders>
+
+
+    <!-- *****************  LOGGERS  *********************** -->
+    <Loggers>
+        <!-- Root Logger for the console. -->
+        <Root level="INFO">
+            <AppenderRef ref="Console-Appender" />
+        </Root>
+
+        <Logger name="brainsBeerLogger" level="INFO">
+            <AppenderRef ref="brainsBeerAppender" />
+    </Logger>
+    <!-- *************************************** -->
+
+    </Loggers>
+
+</Configuration>
