@@ -41,6 +41,9 @@ public class GamesWindowController implements Initializable {
     TeamsWindowController teamsWindowController;
 
     @Autowired
+    GamePrepareWindowController gamePrepareWindowController;
+
+    @Autowired
     MessageWindowController messageWindowController;
 
     @Autowired
@@ -68,6 +71,11 @@ public class GamesWindowController implements Initializable {
     private ObservableList<Game> gameObservableList;
 
     private Stage gamesWindowStage;
+
+    public void handleGameWindowNextButtonClick(){
+        hideGamesWindow();
+        gamePrepareWindowController.displayGamePrepareWindow();
+}
 
     public void handleGameWindowBackButtonClick(){
         hideGamesWindow();

@@ -1,8 +1,10 @@
 package com.araknas.brains_beer.test_data;
 
 import com.araknas.brains_beer.models.Game;
+import com.araknas.brains_beer.models.Round;
 import com.araknas.brains_beer.models.Team;
 import com.araknas.brains_beer.repositories.GameRepository;
+import com.araknas.brains_beer.repositories.RoundRepository;
 import com.araknas.brains_beer.repositories.TeamRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +26,8 @@ public class TestDataLoader {
     TeamRepository teamRepository;
     @Autowired
     GameRepository gameRepository;
+    @Autowired
+    RoundRepository roundRepository;
 
     public void loadTestData(){
         try{
@@ -31,6 +35,7 @@ public class TestDataLoader {
 
             loadTeams();
             loadGames();
+            loadRounds();
         }
         catch (Exception e){
             logger.error("Exception while loading test data, e = " + e.getMessage(), e);
@@ -57,7 +62,6 @@ public class TestDataLoader {
         teamRepository.save(teams);
     }
 
-
     public void loadGames() throws Exception{
         logger.info("Loading test games...");
 
@@ -69,5 +73,16 @@ public class TestDataLoader {
         games.add(new Game("SEL'o albumo minėjimas", "Ooo, ponia Robinson..."));
         games.add(new Game("X-files teminis", "Čia tipo serialas "));
         gameRepository.save(games);
+    }
+
+    public void loadRounds() throws Exception{
+        logger.info("Loading test rounds...");
+
+        List<Round> rounds = new ArrayList<>();
+        rounds.add(new Round("Filmų turas (siaubo)", null, null));
+        rounds.add(new Round("Geografija", null, null));
+        rounds.add(new Round("Muzikinis (Eminem)", null, null));
+        rounds.add(new Round("Vaizdų (tvirtovės)", null, null));
+        roundRepository.save(rounds);
     }
 }

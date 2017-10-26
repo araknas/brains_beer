@@ -83,7 +83,8 @@
                         <Insets left="20.0" />
                      </padding>
                   </GridPane>
-                  <Button fx:id="gameWindowNextButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Pirmyn" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                  <Button fx:id="gameWindowNextButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Pirmyn" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP"
+                          onAction="#handleGameWindowNextButtonClick"/>
                   <Button fx:id="gameWindowBackButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Atgal" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP"
                           onAction="#handleGameWindowBackButtonClick"/>
                </children>
