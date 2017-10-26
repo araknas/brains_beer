@@ -51,18 +51,50 @@ public class TeamsWindowController implements Initializable {
 
     @FXML
     Button addTeamButton;
+
+    @FXML
+    Button deleteTeamButton;
+
     @FXML
     TextField teamNameField;
-    @FXML
 
-    TextField membersCountField;
     @FXML
-    private ListView teamsListView;
+    TextField membersCountField;
+
+    @FXML
+    private ListView<Team> teamsListView;
+
+    private ObservableList<Team> teamObservableList;
 
 
     public void handleTeamWindowNextButtonClick(){
         this.hideTeamsWindow();
         gamesWindowController.displayGamesWindow();
+    }
+
+    public void handleAddTeamButtonClick(){
+        try{
+            logger.info("Adding new team.");
+            addTeamToDatabase();
+            reloadTeamsListView();
+        }
+        catch (Exception e){
+            logger.error("Exception while adding a team, e = " + e.getMessage());
+            messageWindowController.displayMessageWindow("Exception while adding a team, e = " + e.getMessage());
+        }
+    }
+
+    public void handleDeleteTeamButtonClick(){
+        try{
+            logger.info("Deleting team.");
+            deleteTeamFromDatabase();
+            reloadTeamsListView();
+        }
+        catch (Exception e){
+            String message = "Exception while deleting a team, e = " + e.getMessage();
+            logger.error(message);
+            messageWindowController.displayMessageWindow(message);
+        }
     }
 
     public void displayTeamsWindow(){
@@ -112,17 +144,6 @@ public class TeamsWindowController implements Initializable {
         teamsWindowStage.show();
     }
 
-    public void handleAddTeamButtonClick(){
-        try{
-            logger.info("Adding new team.");
-            addTeamToDatabase();
-        }
-        catch (Exception e){
-            logger.error("Exception while adding a team, e = " + e.getMessage());
-            messageWindowController.displayMessageWindow("Exception while adding a team, e = " + e.getMessage());
-        }
-    }
-
     private void addTeamToDatabase() throws Exception{
 
         String teamName = teamNameField.getText();
@@ -135,6 +156,18 @@ public class TeamsWindowController implements Initializable {
         newTeam.setMembersCount(membersCount);
 
         teamRepository.save(newTeam);
+    }
+
+    private void deleteTeamFromDatabase() throws Exception{
+
+        String teamName = teamNameField.getText();
+        Team team = teamRepository.findByName(teamName);
+
+        if(team == null){
+            throw (new Exception("Cannot find this team in the database."));
+        }
+
+        teamRepository.delete(team);
     }
 
     private void validateTeam(String teamName, int membersCount) throws Exception {
@@ -160,7 +193,25 @@ public class TeamsWindowController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        List<String> values = Arrays.asList("one", "two", "three", "three","three","three","three","three","three","three");
-        teamsListView.setItems(FXCollections.observableList(values));
+        teamObservableList = FXCollections.observableArrayList();
+        reloadTeamsListView();
+    }
+
+    private void reloadTeamsListView() {
+        try{
+            List<Team> allTeams = teamRepository.findAll();
+            teamObservableList.clear();
+
+            for(Team team : allTeams){
+                teamObservableList.add(team);
+            }
+            teamsListView.setItems(teamObservableList);
+            teamsListView.setCellFactory(teamsListView -> new TeamListViewCellController());
+
+        }catch (Exception e){
+            String message = "Exception while reloading teams list view, e = " + e.getMessage();
+            logger.error(message);
+            messageWindowController.displayMessageWindow(message);
+        }
     }
 }

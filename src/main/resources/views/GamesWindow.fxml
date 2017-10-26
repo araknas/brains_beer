@@ -59,8 +59,10 @@
                         </Label>
                         <TextField fx:id="gameNameField" GridPane.columnIndex="1" GridPane.valignment="TOP" />
                         <TextField fx:id="gameDescriptionField" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP" />
-                        <Button fx:id="addGameButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" text="Pridėti" GridPane.rowIndex="2" GridPane.valignment="TOP" />
-                        <Button fx:id="deleteGameButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" text="Ištrinti" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                        <Button fx:id="addGameButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" text="Pridėti" GridPane.rowIndex="2" GridPane.valignment="TOP"
+                                onAction="#handleAddGameButtonClick"/>
+                        <Button fx:id="deleteGameButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" text="Ištrinti" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP"
+                                onAction="#handleDeleteGameButtonClick"/>
                      </children>
                      <padding>
                         <Insets right="20.0" />

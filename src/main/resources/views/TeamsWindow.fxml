@@ -61,7 +61,8 @@
                         <TextField fx:id="membersCountField" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP" />
                         <Button fx:id="addTeamButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" text="Pridėti" GridPane.rowIndex="2" GridPane.valignment="TOP"
                                 onAction="#handleAddTeamButtonClick"/>
-                        <Button fx:id="deleteTeamButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" text="Ištrinti" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                        <Button fx:id="deleteTeamButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" text="Ištrinti" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP"
+                                onAction="#handleDeleteTeamButtonClick"/>
                      </children>
                      <padding>
                         <Insets right="20.0" />

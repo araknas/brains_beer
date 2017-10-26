@@ -1,218 +1,306 @@
-[INFO ] 2017-10-25 15:21:22.651 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 15:21:22.686 [JavaFX Application Thread] brainsBeerLogger - Exception while handling team add button, e = For input string: ""
-[INFO ] 2017-10-25 15:21:37.962 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[INFO ] 2017-10-25 15:21:37.962 [JavaFX Application Thread] brainsBeerLogger - Invalid team name
-[INFO ] 2017-10-25 15:24:46.226 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 15:24:46.228 [JavaFX Application Thread] brainsBeerLogger - Exception while handling team add button, e = For input string: ""
-[INFO ] 2017-10-25 15:24:49.058 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[INFO ] 2017-10-25 15:24:49.059 [JavaFX Application Thread] brainsBeerLogger - Please add few members.
-[INFO ] 2017-10-25 15:24:52.162 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[INFO ] 2017-10-25 15:25:01.818 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[INFO ] 2017-10-25 15:30:21.976 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 15:30:21.978 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 15:30:32.040 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 15:30:32.218 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Please add few members.
-[INFO ] 2017-10-25 15:30:37.265 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[INFO ] 2017-10-25 15:30:39.248 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 15:30:39.254 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Team Žafarė already exists
-[INFO ] 2017-10-25 15:30:42.408 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 15:30:42.410 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Team Žafarė already exists
-[INFO ] 2017-10-25 15:30:43.008 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 15:30:43.009 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Team Žafarė already exists
-[INFO ] 2017-10-25 15:30:43.233 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 15:30:43.234 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Team Žafarė already exists
-[INFO ] 2017-10-25 15:30:43.464 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 15:30:43.466 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Team Žafarė already exists
-[INFO ] 2017-10-25 15:30:43.648 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 15:30:43.650 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Team Žafarė already exists
-[INFO ] 2017-10-25 15:31:50.544 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 15:31:50.545 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Team Žafarė already exists
-[INFO ] 2017-10-25 16:19:12.522 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:19:12.523 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[ERROR] 2017-10-25 16:19:12.562 [JavaFX Application Thread] brainsBeerLogger - Exception while displaying Message Window, e = null
-java.lang.NullPointerException: null
-	at com.araknas.brains_beer.controllers.MessageWindowController.createNewMessageWindowAndDisplay(MessageWindowController.java:85) ~[classes/:?]
-	at com.araknas.brains_beer.controllers.MessageWindowController.displayMessageWindow(MessageWindowController.java:49) ~[classes/:?]
-	at com.araknas.brains_beer.controllers.TeamsWindowController.handleAddTeamButtonClick(TeamsWindowController.java:111) ~[classes/:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_60]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_60]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_60]
-	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_60]
-	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71) ~[?:1.8.0_60]
-	at sun.reflect.GeneratedMethodAccessor37.invoke(Unknown Source) ~[?:?]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_60]
-	at java.lang.reflect.Method.invoke(Method.java:497) ~[?:1.8.0_60]
-	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275) ~[?:1.8.0_60]
-	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1771) ~[jfxrt.jar:?]
-	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49) ~[jfxrt.jar:?]
-	at javafx.event.Event.fireEvent(Event.java:198) ~[jfxrt.jar:?]
-	at javafx.scene.Node.fireEvent(Node.java:8411) ~[jfxrt.jar:?]
-	at javafx.scene.control.Button.fire(Button.java:185) ~[jfxrt.jar:?]
-	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182) ~[jfxrt.jar:?]
-	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96) ~[jfxrt.jar:?]
-	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74) ~[jfxrt.jar:?]
-	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54) ~[jfxrt.jar:?]
-	at javafx.event.Event.fireEvent(Event.java:198) ~[jfxrt.jar:?]
-	at javafx.scene.Scene$MouseHandler.process(Scene.java:3757) ~[jfxrt.jar:?]
-	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485) ~[jfxrt.jar:?]
-	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762) ~[jfxrt.jar:?]
-	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494) ~[jfxrt.jar:?]
-	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:352) ~[jfxrt.jar:?]
-	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:275) ~[jfxrt.jar:?]
-	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_60]
-	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$355(GlassViewEventHandler.java:388) ~[jfxrt.jar:?]
-	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389) ~[jfxrt.jar:?]
-	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:387) ~[jfxrt.jar:?]
-	at com.sun.glass.ui.View.handleMouseEvent(View.java:555) ~[jfxrt.jar:?]
-	at com.sun.glass.ui.View.notifyMouse(View.java:937) ~[jfxrt.jar:?]
-	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method) ~[jfxrt.jar:?]
-	at com.sun.glass.ui.win.WinApplication.lambda$null$149(WinApplication.java:191) ~[jfxrt.jar:?]
-	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_60]
-[INFO ] 2017-10-25 16:19:56.441 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:20:05.127 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:21:15.649 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:21:19.361 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:23:13.633 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:23:16.551 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:23:42.856 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:23:42.857 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:23:44.880 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:23:44.881 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:24:51.816 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:24:51.818 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:26:19.079 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:26:19.081 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:26:20.927 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:26:20.928 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:26:28.496 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:26:28.496 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:26:29.232 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:26:29.232 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:26:29.439 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:26:29.439 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:26:29.647 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:26:29.647 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:26:29.879 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:26:29.879 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:26:30.095 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:26:30.095 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:26:30.303 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:26:30.303 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:26:57.783 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:26:57.783 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:27:06.167 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:27:06.167 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:27:07.302 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:27:07.303 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:27:08.279 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:27:08.279 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:27:21.871 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[INFO ] 2017-10-25 16:27:26.775 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:27:26.781 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Team žagarėlis already exists
-[INFO ] 2017-10-25 16:27:34.278 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:27:34.280 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Team žagarėlis already exists
-[INFO ] 2017-10-25 16:27:37.303 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:27:37.305 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Team žagarėlis already exists
-[INFO ] 2017-10-25 16:27:41.686 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:27:41.688 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Please add few members.
-[INFO ] 2017-10-25 16:27:44.159 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:27:44.160 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Please add few members.
-[INFO ] 2017-10-25 16:29:10.015 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:29:10.017 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:29:26.592 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:29:26.592 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:29:27.223 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:29:27.223 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:29:27.742 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:29:27.742 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:29:28.182 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:29:28.183 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:29:36.926 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:29:36.927 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:29:37.470 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:29:37.471 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:31:32.046 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:31:32.047 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:31:39.918 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:31:39.918 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:31:41.262 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:31:41.262 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:31:44.950 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:31:44.950 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:31:46.517 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:31:46.517 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:31:47.542 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:31:47.542 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:31:48.966 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:31:48.966 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:31:51.414 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:31:51.414 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:31:55.805 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:31:55.806 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:31:57.341 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:31:57.341 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:39:13.332 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:39:13.333 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:39:15.635 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:39:15.636 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:39:19.716 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:39:19.716 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:39:22.947 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:39:22.947 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:39:24.051 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:39:24.051 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:39:26.540 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:39:26.540 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:39:27.811 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:39:27.812 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:39:30.419 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:39:30.419 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:39:32.035 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:39:32.036 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:42:49.634 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:42:49.635 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:43:55.098 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:43:55.098 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:43:56.778 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:43:56.778 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:44:01.987 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:44:01.987 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:44:12.250 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:44:12.250 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 16:44:15.602 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 16:44:15.602 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 17:01:07.420 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 17:01:07.422 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
-[INFO ] 2017-10-25 17:01:11.727 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 17:01:11.911 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Please add few members.
-[INFO ] 2017-10-25 17:01:17.773 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[INFO ] 2017-10-25 17:01:28.677 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
-[ERROR] 2017-10-25 17:01:28.683 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Team 87878 already exists
+[INFO ] 2017-10-26 10:42:55.979 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[ERROR] 2017-10-26 10:42:55.990 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
+[INFO ] 2017-10-26 10:43:02.066 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 10:43:04.795 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[ERROR] 2017-10-26 10:43:04.796 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Team asdada already exists
+[INFO ] 2017-10-26 10:43:06.954 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[ERROR] 2017-10-26 10:43:06.956 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Team asdada already exists
+[INFO ] 2017-10-26 10:43:08.954 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 10:43:10.666 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 10:43:33.674 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[ERROR] 2017-10-26 10:43:33.676 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Team asdada45 already exists
+[INFO ] 2017-10-26 10:43:37.602 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 10:43:42.954 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 10:43:46.130 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 10:45:04.490 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 10:45:08.122 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 10:45:10.937 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 10:45:12.498 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 10:45:13.842 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 10:45:17.945 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[ERROR] 2017-10-26 10:45:17.947 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Team Labas1234 already exists
+[INFO ] 2017-10-26 10:45:27.298 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 10:53:34.959 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 10:53:38.135 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 10:53:41.464 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[ERROR] 2017-10-26 10:53:41.465 [JavaFX Application Thread] brainsBeerLogger - Exception while deleting a team, e = Cannot find this team in the database.
+[INFO ] 2017-10-26 10:53:49.455 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[INFO ] 2017-10-26 10:53:58.119 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[ERROR] 2017-10-26 10:53:58.120 [JavaFX Application Thread] brainsBeerLogger - Exception while deleting a team, e = Cannot find this team in the database.
+[INFO ] 2017-10-26 10:54:00.039 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[ERROR] 2017-10-26 10:54:00.040 [JavaFX Application Thread] brainsBeerLogger - Exception while deleting a team, e = Cannot find this team in the database.
+[INFO ] 2017-10-26 10:54:02.615 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[ERROR] 2017-10-26 10:54:02.615 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
+[INFO ] 2017-10-26 11:37:25.256 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 11:37:29.312 [JavaFX Application Thread] brainsBeerLogger - Adding new game.
+[INFO ] 2017-10-26 11:37:39.719 [JavaFX Application Thread] brainsBeerLogger - Adding new game.
+[ERROR] 2017-10-26 11:37:39.721 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a game, e =Game adasdasd already exists
+[INFO ] 2017-10-26 11:37:58.720 [JavaFX Application Thread] brainsBeerLogger - Adding new game.
+[ERROR] 2017-10-26 11:37:58.721 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a game, e =Game adasdasd already exists
+[INFO ] 2017-10-26 11:38:01.560 [JavaFX Application Thread] brainsBeerLogger - Adding new game.
+[INFO ] 2017-10-26 11:38:04.151 [JavaFX Application Thread] brainsBeerLogger - Adding new game.
+[INFO ] 2017-10-26 12:37:43.821 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[INFO ] 2017-10-26 12:37:45.581 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[ERROR] 2017-10-26 12:37:45.584 [JavaFX Application Thread] brainsBeerLogger - Exception while deleting a game, e = Cannot find this game in the database.
+[INFO ] 2017-10-26 12:37:47.806 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[ERROR] 2017-10-26 12:37:47.808 [JavaFX Application Thread] brainsBeerLogger - Exception while deleting a game, e = Cannot find this game in the database.
+[INFO ] 2017-10-26 12:37:50.326 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[ERROR] 2017-10-26 12:37:50.327 [JavaFX Application Thread] brainsBeerLogger - Exception while deleting a game, e = Cannot find this game in the database.
+[INFO ] 2017-10-26 13:14:54.154 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2017-10-26 13:14:55.127 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2017-10-26 13:14:58.625 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[INFO ] 2017-10-26 13:15:25.394 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[ERROR] 2017-10-26 13:15:25.431 [JavaFX Application Thread] brainsBeerLogger - Exception while deleting a team, e = Cannot find this team in the database.
+[INFO ] 2017-10-26 13:15:30.034 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[ERROR] 2017-10-26 13:15:30.036 [JavaFX Application Thread] brainsBeerLogger - Exception while deleting a team, e = Cannot find this team in the database.
+[INFO ] 2017-10-26 13:15:34.778 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[INFO ] 2017-10-26 13:19:12.177 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[ERROR] 2017-10-26 13:19:12.177 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = For input string: ""
+[INFO ] 2017-10-26 13:19:17.193 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 13:19:19.065 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[INFO ] 2017-10-26 13:19:19.929 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 13:19:20.401 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[INFO ] 2017-10-26 13:19:20.881 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 13:19:21.289 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[INFO ] 2017-10-26 13:19:21.777 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 13:19:22.265 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[ERROR] 2017-10-26 13:19:22.267 [JavaFX Application Thread] brainsBeerLogger - Exception while adding a team, e = Team Kukurūzai already exists
+[INFO ] 2017-10-26 13:23:05.481 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2017-10-26 13:23:05.482 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2017-10-26 13:23:05.526 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[INFO ] 2017-10-26 13:23:50.095 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[ERROR] 2017-10-26 13:23:50.122 [JavaFX Application Thread] brainsBeerLogger - Exception while deleting a team, e = Cannot find this team in the database.
+[INFO ] 2017-10-26 14:32:18.852 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2017-10-26 14:32:18.853 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2017-10-26 14:32:18.903 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[ERROR] 2017-10-26 14:32:19.423 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:19.431 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:19.437 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:19.444 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:19.449 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:19.455 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:19.461 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:26.560 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:26.580 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:26.588 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:26.588 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:26.589 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:26.589 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:26.589 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:26.589 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:26.811 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:26.811 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:26.842 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:26.842 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:26.859 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:26.859 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.004 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.012 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.013 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.020 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.021 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.131 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.139 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.139 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.155 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.155 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.228 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.236 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.237 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.251 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.251 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.323 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.331 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.331 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.348 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.349 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.420 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.436 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.436 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.452 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.453 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.531 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.539 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.539 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.555 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.555 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.707 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.723 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.723 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.731 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:27.731 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:28.819 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:28.835 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:28.835 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:28.851 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:28.852 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:28.948 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:28.956 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:28.957 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:28.964 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:28.965 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.067 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.075 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.075 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.083 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.083 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.147 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.163 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.163 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.170 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.171 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.251 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.259 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.260 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.275 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.276 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.322 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.330 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.330 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.347 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.347 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.411 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.426 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.427 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.434 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:29.435 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:30.660 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:30.676 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:30.676 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:30.692 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:30.693 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:30.788 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:30.804 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:30.804 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:30.820 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:30.820 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:30.891 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:30.900 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:30.901 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:30.972 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:30.979 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:30.980 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:31.708 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:31.723 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:31.724 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:31.731 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:31.732 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:31.995 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:32.011 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:32.012 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:32.019 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:32.020 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:32.292 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:32.308 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:32.309 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:32.315 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:32.316 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:32.620 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:32.636 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:32.637 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:32.644 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:32.644 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:37.076 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:37.099 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:37.100 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:37.116 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:37.116 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:38.114 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:38.139 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:38.139 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:38.171 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:38.172 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:38.547 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:38.604 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:38.604 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:38.795 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:38.819 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:32:38.820 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[INFO ] 2017-10-26 14:33:01.481 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2017-10-26 14:33:01.482 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2017-10-26 14:33:01.581 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[INFO ] 2017-10-26 14:35:24.252 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2017-10-26 14:35:24.253 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2017-10-26 14:35:24.303 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[ERROR] 2017-10-26 14:36:07.706 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = Controller value already specified.
+/C:/Intellij_projects/brains_beer/target/classes/views/TeamListCell.fxml:10
+
+[ERROR] 2017-10-26 14:36:09.447 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = Controller value already specified.
+/C:/Intellij_projects/brains_beer/target/classes/views/TeamListCell.fxml:10
+
+[ERROR] 2017-10-26 14:36:10.447 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = Controller value already specified.
+/C:/Intellij_projects/brains_beer/target/classes/views/TeamListCell.fxml:10
+
+[ERROR] 2017-10-26 14:36:10.452 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = Controller value already specified.
+/C:/Intellij_projects/brains_beer/target/classes/views/TeamListCell.fxml:10
+
+[ERROR] 2017-10-26 14:36:10.455 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = Controller value already specified.
+/C:/Intellij_projects/brains_beer/target/classes/views/TeamListCell.fxml:10
+
+[ERROR] 2017-10-26 14:36:10.460 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = Controller value already specified.
+/C:/Intellij_projects/brains_beer/target/classes/views/TeamListCell.fxml:10
+
+[ERROR] 2017-10-26 14:36:10.464 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = Controller value already specified.
+/C:/Intellij_projects/brains_beer/target/classes/views/TeamListCell.fxml:10
+
+[ERROR] 2017-10-26 14:36:13.227 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:36:13.233 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = Controller value already specified.
+/C:/Intellij_projects/brains_beer/target/classes/views/TeamListCell.fxml:10
+
+[ERROR] 2017-10-26 14:36:13.238 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:36:13.238 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:36:13.250 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:36:13.250 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:36:13.434 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:36:13.450 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:36:13.450 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:36:13.466 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:36:13.466 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:36:13.667 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:36:13.682 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:36:13.683 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:36:13.691 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[ERROR] 2017-10-26 14:36:13.692 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = null
+[INFO ] 2017-10-26 14:50:07.349 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2017-10-26 14:50:07.349 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2017-10-26 14:50:07.400 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[ERROR] 2017-10-26 14:50:07.886 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = Controller value already specified.
+/C:/Intellij_projects/brains_beer/target/classes/views/TeamListCell.fxml:10
+
+[ERROR] 2017-10-26 14:50:07.889 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = Controller value already specified.
+/C:/Intellij_projects/brains_beer/target/classes/views/TeamListCell.fxml:10
+
+[ERROR] 2017-10-26 14:50:07.891 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = Controller value already specified.
+/C:/Intellij_projects/brains_beer/target/classes/views/TeamListCell.fxml:10
+
+[ERROR] 2017-10-26 14:50:07.892 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = Controller value already specified.
+/C:/Intellij_projects/brains_beer/target/classes/views/TeamListCell.fxml:10
+
+[ERROR] 2017-10-26 14:50:07.894 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = Controller value already specified.
+/C:/Intellij_projects/brains_beer/target/classes/views/TeamListCell.fxml:10
+
+[ERROR] 2017-10-26 14:50:07.895 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = Controller value already specified.
+/C:/Intellij_projects/brains_beer/target/classes/views/TeamListCell.fxml:10
+
+[ERROR] 2017-10-26 14:50:07.896 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = Controller value already specified.
+/C:/Intellij_projects/brains_beer/target/classes/views/TeamListCell.fxml:10
+
+[ERROR] 2017-10-26 14:50:22.431 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Team list cells, e = Controller value already specified.
+/C:/Intellij_projects/brains_beer/target/classes/views/TeamListCell.fxml:10
+
+[INFO ] 2017-10-26 14:51:50.160 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2017-10-26 14:51:50.160 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2017-10-26 14:51:50.227 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[INFO ] 2017-10-26 14:52:41.191 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2017-10-26 14:52:41.192 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2017-10-26 14:52:41.242 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[INFO ] 2017-10-26 14:53:23.877 [JavaFX Application Thread] brainsBeerLogger - Adding new team.
+[INFO ] 2017-10-26 14:54:09.596 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[INFO ] 2017-10-26 14:54:19.852 [JavaFX Application Thread] brainsBeerLogger - Deleting team.
+[INFO ] 2017-10-26 14:59:01.207 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2017-10-26 14:59:01.208 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2017-10-26 14:59:01.257 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[INFO ] 2017-10-26 15:00:12.573 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2017-10-26 15:00:12.573 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2017-10-26 15:00:12.615 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[INFO ] 2017-10-26 15:01:09.930 [JavaFX Application Thread] brainsBeerLogger - Adding new game.

@@ -15,8 +15,14 @@ public class Game {
     private String gameTitle;
     private String gameStartTime;
     private String gameEndTime;
+    private String gameDesc;
 
     public Game() {
+    }
+
+    public Game(String gameTitle, String gameDesc) {
+        this.gameDesc = gameDesc;
+        this.gameTitle = gameTitle;
     }
 
     public Integer getId() {
@@ -49,5 +55,22 @@ public class Game {
 
     public void setGameEndTime(String gameEndTime) {
         this.gameEndTime = gameEndTime;
+    }
+
+    public String getGameDesc() {
+        return gameDesc;
+    }
+
+    public void setGameDesc(String gameDesc) {
+        this.gameDesc = gameDesc;
+    }
+
+    @Override
+    public String toString() {
+        return "game{" +
+                "id=" + id +
+                ", title='" + gameTitle + '\'' +
+                ", desc=" + gameDesc +
+                '}';
     }
 }

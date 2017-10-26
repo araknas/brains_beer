@@ -1,6 +1,7 @@
 package com.araknas.brains_beer;
 import com.araknas.brains_beer.controllers.GamesWindowController;
 import com.araknas.brains_beer.controllers.TeamsWindowController;
+import com.araknas.brains_beer.test_data.TestDataLoader;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -25,6 +26,10 @@ public class BrainsBeerApplication extends Application {
 	@Override
 	public void init() throws Exception {
 		springContext = SpringApplication.run(BrainsBeerApplication.class);
+
+		// This is only for the developing
+		TestDataLoader testDataLoader = (TestDataLoader) springContext.getBean("testDataLoader");
+		testDataLoader.loadTestData();
 	}
 
 	@Override
