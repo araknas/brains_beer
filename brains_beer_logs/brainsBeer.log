@@ -432,3 +432,75 @@
 [INFO ] 2017-10-27 15:34:22.139 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Barsuko Nagas
 [INFO ] 2017-10-27 15:34:22.356 [JavaFX Application Thread] brainsBeerLogger - Transferring team Barsuko Nagas to all teams.
 [INFO ] 2017-10-27 15:34:22.356 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Barsuko Nagas
+[INFO ] 2017-10-27 15:36:19.603 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Barsuko Nagas
+[INFO ] 2017-10-27 15:36:19.763 [JavaFX Application Thread] brainsBeerLogger - Transferring team Barsuko Nagas to selected ones.
+[INFO ] 2017-10-27 15:36:19.769 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Barsuko Nagas
+[INFO ] 2017-10-27 15:36:20.299 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Filmų turas (siaubo)
+[INFO ] 2017-10-27 15:36:20.434 [JavaFX Application Thread] brainsBeerLogger - Transferring round Filmų turas (siaubo) to selected ones.
+[INFO ] 2017-10-27 15:36:20.440 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Filmų turas (siaubo)
+[INFO ] 2017-10-27 15:36:21.579 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Filmų turas (siaubo)
+[INFO ] 2017-10-27 15:51:37.130 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2017-10-27 15:51:37.131 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2017-10-27 15:51:37.186 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[INFO ] 2017-10-27 15:51:37.194 [JavaFX-Launcher] brainsBeerLogger - Loading test rounds...
+[INFO ] 2017-10-27 15:52:07.278 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Geografija
+[INFO ] 2017-10-27 15:52:07.454 [JavaFX Application Thread] brainsBeerLogger - Transferring round Geografija to selected ones.
+[INFO ] 2017-10-27 15:52:07.470 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Geografija
+[INFO ] 2017-10-27 15:52:07.838 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Kukurūzai
+[INFO ] 2017-10-27 15:52:08.014 [JavaFX Application Thread] brainsBeerLogger - Transferring team Kukurūzai to selected ones.
+[INFO ] 2017-10-27 15:52:08.015 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Kukurūzai
+[INFO ] 2017-10-27 15:53:59.151 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2017-10-27 15:53:59.152 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2017-10-27 15:53:59.218 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[INFO ] 2017-10-27 15:53:59.224 [JavaFX-Launcher] brainsBeerLogger - Loading test rounds...
+[INFO ] 2017-10-27 15:54:23.630 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Kukurūzai
+[INFO ] 2017-10-27 15:54:23.774 [JavaFX Application Thread] brainsBeerLogger - Transferring team Kukurūzai to selected ones.
+[INFO ] 2017-10-27 15:54:23.775 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Kukurūzai
+[INFO ] 2017-10-27 15:54:24.317 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Filmų turas (siaubo)
+[INFO ] 2017-10-27 15:54:24.486 [JavaFX Application Thread] brainsBeerLogger - Transferring round Filmų turas (siaubo) to selected ones.
+[INFO ] 2017-10-27 15:54:24.486 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Filmų turas (siaubo)
+[INFO ] 2017-10-27 15:54:27.205 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Begėdžiai
+[INFO ] 2017-10-27 15:54:27.382 [JavaFX Application Thread] brainsBeerLogger - Transferring team Begėdžiai to selected ones.
+[INFO ] 2017-10-27 15:54:27.388 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Begėdžiai
+[INFO ] 2017-10-27 15:54:29.550 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Parduodu malkas
+[INFO ] 2017-10-27 15:54:29.710 [JavaFX Application Thread] brainsBeerLogger - Transferring team Parduodu malkas to selected ones.
+[INFO ] 2017-10-27 15:54:29.710 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Parduodu malkas
+[INFO ] 2017-10-27 15:54:30.454 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Muzikinis (Eminem)
+[INFO ] 2017-10-27 15:54:30.621 [JavaFX Application Thread] brainsBeerLogger - Transferring round Muzikinis (Eminem) to selected ones.
+[INFO ] 2017-10-27 15:54:30.628 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Muzikinis (Eminem)
+[INFO ] 2017-10-27 15:54:31.053 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Vaizdų (tvirtovės)
+[INFO ] 2017-10-27 15:54:31.214 [JavaFX Application Thread] brainsBeerLogger - Transferring round Vaizdų (tvirtovės) to selected ones.
+[INFO ] 2017-10-27 15:54:31.214 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Vaizdų (tvirtovės)
+[INFO ] 2017-10-27 15:54:33.389 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Vaizdų (tvirtovės)
+[INFO ] 2017-10-27 15:54:33.558 [JavaFX Application Thread] brainsBeerLogger - Transferring round Vaizdų (tvirtovės) to all rounds.
+[INFO ] 2017-10-27 15:54:33.564 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Vaizdų (tvirtovės)
+[INFO ] 2017-10-27 15:54:34.437 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Filmų turas (siaubo)
+[INFO ] 2017-10-27 15:54:34.613 [JavaFX Application Thread] brainsBeerLogger - Transferring round Filmų turas (siaubo) to all rounds.
+[INFO ] 2017-10-27 15:54:34.619 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Filmų turas (siaubo)
+[INFO ] 2017-10-27 15:54:35.349 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Kukurūzai
+[INFO ] 2017-10-27 15:54:35.517 [JavaFX Application Thread] brainsBeerLogger - Transferring team Kukurūzai to all teams.
+[INFO ] 2017-10-27 15:54:35.518 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Kukurūzai
+[INFO ] 2017-10-27 15:54:35.877 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Parduodu malkas
+[INFO ] 2017-10-27 15:54:36.038 [JavaFX Application Thread] brainsBeerLogger - Transferring team Parduodu malkas to all teams.
+[INFO ] 2017-10-27 15:54:36.038 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Parduodu malkas
+[INFO ] 2017-10-27 15:54:40.005 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Gal tuo ir baikim
+[INFO ] 2017-10-27 15:54:40.173 [JavaFX Application Thread] brainsBeerLogger - Transferring team Gal tuo ir baikim to selected ones.
+[INFO ] 2017-10-27 15:54:40.179 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Gal tuo ir baikim
+[INFO ] 2017-10-27 16:06:11.906 [JavaFX Application Thread] brainsBeerLogger - Adding new game.
+[INFO ] 2017-10-27 16:11:53.208 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Barsuko Nagas
+[INFO ] 2017-10-27 16:11:53.584 [JavaFX Application Thread] brainsBeerLogger - Transferring team Barsuko Nagas to selected ones.
+[INFO ] 2017-10-27 16:11:53.590 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Barsuko Nagas
+[INFO ] 2017-10-27 16:11:59.632 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Imbieriniai Tritaškių princai
+[INFO ] 2017-10-27 16:11:59.808 [JavaFX Application Thread] brainsBeerLogger - Transferring team Imbieriniai Tritaškių princai to selected ones.
+[INFO ] 2017-10-27 16:11:59.815 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Imbieriniai Tritaškių princai
+[INFO ] 2017-10-27 16:12:00.232 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Simonas & Garfunkelis
+[INFO ] 2017-10-27 16:22:54.645 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Geografija
+[INFO ] 2017-10-27 16:22:55.069 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Filmų turas (siaubo)
+[INFO ] 2017-10-27 16:22:56.724 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Simonas & Garfunkelis
+[INFO ] 2017-10-27 16:22:57.092 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Imbieriniai Tritaškių princai
+[INFO ] 2017-10-27 16:22:58.973 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Muzikinis (Eminem)
+[INFO ] 2017-10-27 16:23:00.724 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Vaizdų (tvirtovės)
+[INFO ] 2017-10-27 16:23:01.125 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Muzikinis (Eminem)
+[INFO ] 2017-10-27 16:23:03.492 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Muzikinis (Eminem)
+[INFO ] 2017-10-27 16:23:03.845 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Vaizdų (tvirtovės)
+[INFO ] 2017-10-27 16:42:57.063 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Vaizdų (tvirtovės)

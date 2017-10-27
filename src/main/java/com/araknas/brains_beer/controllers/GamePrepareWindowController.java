@@ -1,5 +1,6 @@
 package com.araknas.brains_beer.controllers;
 
+import com.araknas.brains_beer.models.Game;
 import com.araknas.brains_beer.models.Round;
 import com.araknas.brains_beer.models.Team;
 import com.araknas.brains_beer.repositories.RoundRepository;
@@ -78,6 +79,8 @@ public class GamePrepareWindowController implements Initializable, ViewControlle
     private ObservableList<Team> allTeamsObservableList;
     private ObservableList<Team> selectedTeamsObservableList;
 
+    private Game selectedGame;
+
     private Stage gamePrepareWindowStage;
 
     public void handleGamePrepareNextButtonClick(){
@@ -99,7 +102,7 @@ public class GamePrepareWindowController implements Initializable, ViewControlle
         return isShowing;
     }
 
-    public void displayGamePrepareWindow(){
+    public void displayGamePrepareWindow(Game selectedGame){
         try {
             if(gamePrepareWindowStage != null && !gamePrepareWindowStage.isShowing()){
                 gamePrepareWindowStage.show();
@@ -107,6 +110,9 @@ public class GamePrepareWindowController implements Initializable, ViewControlle
             else{
                 createNewGamePrepareWindowAndDisplay();
             }
+            this.selectedGame = selectedGame;
+
+            reloadSelectedGameData();
             reloadAllTeamsListView(true, true);
             reloadAllRoundsListView(true, true);
             reloadSelectedTeamsListView(true, true);
@@ -115,6 +121,19 @@ public class GamePrepareWindowController implements Initializable, ViewControlle
         catch (Exception e){
             logger.error("Exception while displaying Game Prepare Window, e = " + e.getMessage(), e);
             messageWindowController.displayMessageWindow(e.getMessage());
+        }
+    }
+
+    private void reloadSelectedGameData() {
+        try{
+            if(selectedGame != null){
+                gameTitle.setText(selectedGame.getGameTitle());
+            }
+        }
+        catch (Exception e){
+            String error = "Exception while reloading selected game data, e = " + e.getMessage();
+            logger.error(error + e.getMessage(), e);
+            messageWindowController.displayMessageWindow(error);
         }
     }
 

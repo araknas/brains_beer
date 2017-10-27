@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +21,7 @@ public class GameListViewCellController extends ListCell<Game> {
 
     public static Logger logger = LoggerFactory.getLogger("brainsBeerLogger");
 
+    private ViewController parentController;
     @FXML
     Label gameNameLabel;
 
@@ -27,6 +29,13 @@ public class GameListViewCellController extends ListCell<Game> {
     GridPane gameCellGridPane;
 
     private FXMLLoader fxmlLoader;
+
+    public GameListViewCellController(ViewController parentController) {
+        this.parentController = parentController;
+    }
+
+    public GameListViewCellController() {
+    }
 
     @Override
     protected void updateItem(Game game, boolean empty) {
@@ -44,6 +53,7 @@ public class GameListViewCellController extends ListCell<Game> {
                     fxmlLoader.load();
                 }
                 gameNameLabel.setText(game.getGameTitle());
+                setOnMouseClicked(event -> handleMouseClick(event, game));
 
                 setText(null);
                 setGraphic(gameCellGridPane);
@@ -51,6 +61,12 @@ public class GameListViewCellController extends ListCell<Game> {
         }
         catch (Exception e){
             logger.error("Exception while updating Game list cells, e = " + e.getMessage());
+        }
+    }
+
+    private void handleMouseClick(MouseEvent event, Game game) {
+        if(parentController instanceof GamesWindowController){
+            ((GamesWindowController) parentController).setSelectedGame(game);
         }
     }
 }

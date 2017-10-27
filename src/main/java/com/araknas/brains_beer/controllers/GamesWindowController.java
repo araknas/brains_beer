@@ -30,7 +30,7 @@ import java.util.ResourceBundle;
  * Created by Giedrius on 2017.10.21.
  */
 @Component
-public class GamesWindowController implements Initializable {
+public class GamesWindowController implements Initializable, ViewController {
 
     public static Logger logger = LoggerFactory.getLogger("brainsBeerLogger");
 
@@ -71,11 +71,18 @@ public class GamesWindowController implements Initializable {
     private ObservableList<Game> gameObservableList;
 
     private Stage gamesWindowStage;
+    private Game selectedGame;
 
     public void handleGameWindowNextButtonClick(){
-        hideGamesWindow();
-        gamePrepareWindowController.displayGamePrepareWindow();
-}
+
+        if(selectedGame != null){
+            hideGamesWindow();
+            gamePrepareWindowController.displayGamePrepareWindow(selectedGame);
+        }
+        else{
+            messageWindowController.displayMessageWindow("Pasirinkite komandą!");
+        }
+    }
 
     public void handleGameWindowBackButtonClick(){
         hideGamesWindow();
@@ -206,7 +213,7 @@ public class GamesWindowController implements Initializable {
                 gameObservableList.add(game);
             }
             gamesListView.setItems(gameObservableList);
-            gamesListView.setCellFactory(gamesListView -> new GameListViewCellController());
+            gamesListView.setCellFactory(gamesListView -> new GameListViewCellController(this));
 
         }catch (Exception e){
             String message = "Exception while reloading games list view, e = " + e.getMessage();
@@ -219,5 +226,9 @@ public class GamesWindowController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         gameObservableList = FXCollections.observableArrayList();
         reloadGamesListView();
+    }
+
+    public void setSelectedGame(Game selectedGame) {
+        this.selectedGame = selectedGame;
     }
 }
