@@ -30,7 +30,7 @@ import java.util.ResourceBundle;
  * Created by Giedrius on 2017.10.21.
  */
 @Component
-public class TeamsWindowController implements Initializable {
+public class TeamsWindowController implements Initializable, ViewController {
 
     public static Logger logger = LoggerFactory.getLogger("brainsBeerLogger");
 
@@ -205,7 +205,7 @@ public class TeamsWindowController implements Initializable {
                 teamObservableList.add(team);
             }
             teamsListView.setItems(teamObservableList);
-            teamsListView.setCellFactory(teamsListView -> new TeamListViewCellController());
+            teamsListView.setCellFactory(teamsListView -> new TeamListViewCellController(this, false));
 
         }catch (Exception e){
             String message = "Exception while reloading teams list view, e = " + e.getMessage();

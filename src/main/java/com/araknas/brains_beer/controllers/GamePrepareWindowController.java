@@ -33,7 +33,7 @@ import java.util.ResourceBundle;
  */
 
 @Component
-public class GamePrepareWindowController implements Initializable {
+public class GamePrepareWindowController implements Initializable, ViewController {
 
     public static Logger logger = LoggerFactory.getLogger("brainsBeerLogger");
 
@@ -89,16 +89,28 @@ public class GamePrepareWindowController implements Initializable {
         gamesWindowController.displayGamesWindow();
     }
 
+    public boolean checkIfGamePrepareWindowIsShowing(){
+
+        boolean isShowing = false;
+        if(gamePrepareWindowStage != null && gamePrepareWindowStage.isShowing()){
+            isShowing = true;
+        }
+
+        return isShowing;
+    }
+
     public void displayGamePrepareWindow(){
         try {
             if(gamePrepareWindowStage != null && !gamePrepareWindowStage.isShowing()){
-                reloadAllTeamsListView();
-                reloadAllRoundsListView();
                 gamePrepareWindowStage.show();
             }
             else{
                 createNewGamePrepareWindowAndDisplay();
             }
+            reloadAllTeamsListView(true, true);
+            reloadAllRoundsListView(true, true);
+            reloadSelectedTeamsListView(true, true);
+            reloadSelectedRoundsListView(true, true);
         }
         catch (Exception e){
             logger.error("Exception while displaying Game Prepare Window, e = " + e.getMessage(), e);
@@ -142,20 +154,29 @@ public class GamePrepareWindowController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         allTeamsObservableList = FXCollections.observableArrayList();
         allRoundsObservableList = FXCollections.observableArrayList();
-        reloadAllTeamsListView();
-        reloadAllRoundsListView();
+        selectedTeamsObservableList = FXCollections.observableArrayList();
+        selectedRoundsObservableList = FXCollections.observableArrayList();
+        reloadAllTeamsListView(true, true);
+        reloadAllRoundsListView(true, true);
+        reloadSelectedTeamsListView(true, true);
+        reloadSelectedRoundsListView(true, true);
     }
 
-    private void reloadAllTeamsListView() {
+    private void reloadAllTeamsListView(boolean isNeedToFetchFromDb, boolean isNeedToClear) {
         try{
-            List<Team> allTeams = teamRepository.findAll();
-            allTeamsObservableList.clear();
-
-            for(Team team : allTeams){
-                allTeamsObservableList.add(team);
+            if(isNeedToClear){
+                allTeamsObservableList.clear();
             }
+            if(isNeedToFetchFromDb){
+                List<Team> allTeams = teamRepository.findAll();
+
+                for(Team team : allTeams){
+                    allTeamsObservableList.add(team);
+                }
+            }
+
             allTeamsListView.setItems(allTeamsObservableList);
-            allTeamsListView.setCellFactory(allTeamsListView -> new TeamListViewCellController());
+            allTeamsListView.setCellFactory(allTeamsListView -> new TeamListViewCellController(this, false));
 
         }catch (Exception e){
             String message = "Exception while reloading all teams list view, e = " + e.getMessage();
@@ -164,21 +185,121 @@ public class GamePrepareWindowController implements Initializable {
         }
     }
 
-    private void reloadAllRoundsListView() {
+    private void reloadSelectedTeamsListView(boolean isNeedToFetchFromDb, boolean isNeedToClear) {
         try{
-            List<Round> allRounds = roundRepository.findAll();
-            allRoundsObservableList.clear();
-
-            for(Round round : allRounds){
-                allRoundsObservableList.add(round);
+            //TODO: retrieve form saved games (future feature)
+            if(isNeedToClear){
+                selectedTeamsObservableList.clear();
             }
-            allRoundsListView.setItems(allRoundsObservableList);
-            allRoundsListView.setCellFactory(allTeamsListView -> new RoundListViewCellController());
+            selectedTeamsListView.setItems(selectedTeamsObservableList);
+            selectedTeamsListView.setCellFactory(allTeamsListView -> new TeamListViewCellController(this, true));
 
         }catch (Exception e){
             String message = "Exception while reloading all teams list view, e = " + e.getMessage();
             logger.error(message);
             messageWindowController.displayMessageWindow(message);
         }
+    }
+
+    private void reloadAllRoundsListView(boolean isNeedToFetchFromDb, boolean isNeedToClear) {
+        try{
+            if(isNeedToClear){
+                allRoundsObservableList.clear();
+            }
+
+            if(isNeedToFetchFromDb){
+                List<Round> allRounds = roundRepository.findAll();
+
+                for(Round round : allRounds){
+                    allRoundsObservableList.add(round);
+                }
+            }
+
+            allRoundsListView.setItems(allRoundsObservableList);
+            allRoundsListView.setCellFactory(allTeamsListView -> new RoundListViewCellController(this, false));
+
+        }catch (Exception e){
+            String message = "Exception while reloading all teams list view, e = " + e.getMessage();
+            logger.error(message);
+            messageWindowController.displayMessageWindow(message);
+        }
+    }
+
+    private void reloadSelectedRoundsListView(boolean isNeedToFetchFromDb, boolean isNeedToClear) {
+        try{
+            //TODO: retrieve form saved rounds (future feature)
+            if(isNeedToClear){
+                selectedRoundsObservableList.clear();
+            }
+            selectedRoundsListView.setItems(selectedRoundsObservableList);
+            selectedRoundsListView.setCellFactory(allRoundsListView -> new RoundListViewCellController(this, true));
+
+        }catch (Exception e){
+            String message = "Exception while reloading all teams list view, e = " + e.getMessage();
+            logger.error(message);
+            messageWindowController.displayMessageWindow(message);
+        }
+    }
+
+    public void transferTeamToSelectedOnes(Team team) throws Exception{
+        logger.info("Transferring team " + team.getName() + " to selected ones.");
+
+        if(allTeamsObservableList.contains(team)){
+            allTeamsObservableList.remove(team);
+        }
+
+        if(!selectedTeamsObservableList.contains(team)){
+            selectedTeamsObservableList.add(team);
+        }
+
+        reloadAllTeamsListView(false, false);
+        reloadSelectedTeamsListView(false, false);
+    }
+
+    public void transferTeamToAllTeams(Team team) throws Exception{
+
+        logger.info("Transferring team " + team.getName() + " to all teams.");
+
+        if(selectedTeamsObservableList.contains(team)){
+            selectedTeamsObservableList.remove(team);
+        }
+
+        if(!allTeamsObservableList.contains(team)){
+            allTeamsObservableList.add(team);
+        }
+
+        reloadAllTeamsListView(false, false);
+        reloadSelectedTeamsListView(false, false);
+    }
+
+    public void transferRoundToSelectedOnes(Round round) throws Exception{
+        logger.info("Transferring round " + round.getTitle() + " to selected ones.");
+
+        if(allRoundsObservableList.contains(round)){
+            allRoundsObservableList.remove(round);
+        }
+
+        if(!selectedRoundsObservableList.contains(round)){
+            selectedRoundsObservableList.add(round);
+        }
+
+        reloadAllRoundsListView(false, false);
+        reloadSelectedRoundsListView(false, false);
+    }
+
+    public void transferRoundToAllRounds(Round round) throws Exception{
+
+        logger.info("Transferring round " + round.getTitle() + " to all rounds.");
+
+        if(selectedRoundsObservableList.contains(round)){
+            selectedRoundsObservableList.remove(round);
+        }
+
+        if(!allRoundsObservableList.contains(round)){
+            allRoundsObservableList.add(round);
+        }
+
+        reloadAllRoundsListView(false, false);
+        reloadSelectedRoundsListView(false, false);
     }
 }

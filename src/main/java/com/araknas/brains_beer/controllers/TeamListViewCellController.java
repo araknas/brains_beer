@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +20,9 @@ public class TeamListViewCellController extends ListCell<Team> {
 
     public static Logger logger = LoggerFactory.getLogger("brainsBeerLogger");
 
+    private ViewController parentController;
+    private boolean isSelectedList;
+
     @FXML
     Label teamNameLabel;
 
@@ -26,6 +30,14 @@ public class TeamListViewCellController extends ListCell<Team> {
     GridPane teamCellGridPane;
 
     private FXMLLoader fxmlLoader;
+
+    public TeamListViewCellController(ViewController parentController, boolean isSelectedList) {
+            this.parentController = parentController;
+            this.isSelectedList = isSelectedList;
+    }
+
+    public TeamListViewCellController() {
+    }
 
     @Override
     protected void updateItem(Team team, boolean empty) {
@@ -44,7 +56,7 @@ public class TeamListViewCellController extends ListCell<Team> {
                     fxmlLoader.load();
                 }
                 teamNameLabel.setText(team.getName());
-                setOnMouseClicked(event -> handleMouseClick(team));
+                setOnMouseClicked(event -> handleMouseClick(event, team));
 
                 setText(null);
                 setGraphic(teamCellGridPane);
@@ -55,8 +67,34 @@ public class TeamListViewCellController extends ListCell<Team> {
         }
     }
 
-    private void handleMouseClick(Team team) {
-        // TODO: implement double click when game prepare window is showing
-        logger.info("Mouse click on " + team.getName());
+    private void handleMouseClick(MouseEvent event, Team team) {
+        if(parentController instanceof GamePrepareWindowController){
+            boolean isGamePrepareWindowShowing =
+                    ((GamePrepareWindowController) parentController).checkIfGamePrepareWindowIsShowing();
+            if(isGamePrepareWindowShowing){
+                handleMouseClickFromGamePrepareWindow(event, team);
+                logger.info("Mouse click on " + team.getName());
+            }
+        }
+    }
+
+    private void handleMouseClickFromGamePrepareWindow(MouseEvent event, Team team) {
+
+        try{
+            if(event.getClickCount() == 2){
+                if(!isSelectedList){
+
+                    ((GamePrepareWindowController) parentController).transferTeamToSelectedOnes(team);
+                }
+                else{
+                    ((GamePrepareWindowController) parentController).transferTeamToAllTeams(team);
+                }
+            }
+        }
+        catch (Exception e){
+            String error = "Exception while handling mouse click e = " + e.getMessage();
+            logger.error(error);
+        }
+
     }
 }
