@@ -77,10 +77,10 @@ public class GamesWindowController implements Initializable, ViewController {
 
         if(selectedGame != null){
             hideGamesWindow();
-            gamePrepareWindowController.displayGamePrepareWindow(selectedGame);
+            gamePrepareWindowController.displayGamePrepareWindow(selectedGame, true, true);
         }
         else{
-            messageWindowController.displayMessageWindow("Pasirinkite komandą!");
+            messageWindowController.displayMessageWindow("Pasirinkite žaidimą!");
         }
     }
 

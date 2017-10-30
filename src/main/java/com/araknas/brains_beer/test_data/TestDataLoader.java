@@ -1,11 +1,7 @@
 package com.araknas.brains_beer.test_data;
 
-import com.araknas.brains_beer.models.Game;
-import com.araknas.brains_beer.models.Round;
-import com.araknas.brains_beer.models.Team;
-import com.araknas.brains_beer.repositories.GameRepository;
-import com.araknas.brains_beer.repositories.RoundRepository;
-import com.araknas.brains_beer.repositories.TeamRepository;
+import com.araknas.brains_beer.models.*;
+import com.araknas.brains_beer.repositories.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +23,11 @@ public class TestDataLoader {
     @Autowired
     GameRepository gameRepository;
     @Autowired
+    RoundTypeRepository roundTypeRepository;
+    @Autowired
     RoundRepository roundRepository;
+    @Autowired
+    QuestionRepository questionRepository;
 
     public void loadTestData(){
         try{
@@ -35,7 +35,9 @@ public class TestDataLoader {
 
             loadTeams();
             loadGames();
+            loadRoundTypes();
             loadRounds();
+            loadQuestions();
         }
         catch (Exception e){
             logger.error("Exception while loading test data, e = " + e.getMessage(), e);
@@ -75,14 +77,53 @@ public class TestDataLoader {
         gameRepository.save(games);
     }
 
+
+    private void loadRoundTypes() throws Exception{
+        logger.info("Loading test round types...");
+
+        List<RoundType> roundTypes = new ArrayList<>();
+        roundTypes.add(new RoundType("Blitz", null));
+        roundTypes.add(new RoundType("Regular", null));
+
+        roundTypeRepository.save(roundTypes);
+    }
+
     public void loadRounds() throws Exception{
         logger.info("Loading test rounds...");
 
+        RoundType blitzRound = roundTypeRepository.findByTitle("Blitz");
+        RoundType regularRound = roundTypeRepository.findByTitle("Regular");
+
         List<Round> rounds = new ArrayList<>();
-        rounds.add(new Round("Filmų turas (siaubo)", null, null));
-        rounds.add(new Round("Geografija", null, null));
-        rounds.add(new Round("Muzikinis (Eminem)", null, null));
-        rounds.add(new Round("Vaizdų (tvirtovės)", null, null));
+        rounds.add(new Round("Filmų turas (siaubo)", blitzRound, null));
+        rounds.add(new Round("Geografija", blitzRound, null));
+        rounds.add(new Round("Muzikinis (Eminem)", blitzRound, null));
+        rounds.add(new Round("Vaizdų (tvirtovės)", regularRound, null));
+        rounds.add(new Round("Apie Čaką Norris", regularRound, null));
         roundRepository.save(rounds);
+    }
+
+    private void loadQuestions() throws Exception{
+        logger.info("Loading test questions...");
+
+        Round chuckNorrisRound = roundRepository.findByTitle("Apie Čaką Norris");
+        List<Question> questions = new ArrayList<>();
+        questions.add(new Question(1, "Kas yra vienitnelis žmogus, peršokęs Everestą?", "", "Čakas Norrisas", 60, chuckNorrisRound ));
+        questions.add(new Question(2, "Žmogus, radęs kampų apvaliame kambaryje?", "", "Čakas Norrisas", 60, chuckNorrisRound ));
+        questions.add(new Question(3, "Žmogus nunuodijęs gyvatę?", "", "Čakas Norrisas", 60, chuckNorrisRound ));
+        questions.add(new Question(4, "Chuck Norris turi dvi pavaras. Kokias?", "", "Eiti ir žudyti.", 60, chuckNorrisRound ));
+        questions.add(new Question(5, "kas dalijasi iš nulio?", "", "Čakas Norrisas", 60, chuckNorrisRound ));
+        questionRepository.save(questions);
+
+        Round moviesRound = roundRepository.findByTitle("Filmų turas (siaubo)");
+        questions = new ArrayList<>();
+        questions.add(new Question(1, "Filmo Švytėjimas autorius?", "", "Stanley Bubrick", 30, moviesRound ));
+        questions.add(new Question(2, "Psycho autorius?", "", "Alfred Hitchcock", 30, moviesRound ));
+        questions.add(new Question(3, "Filmas It pastatytas pagal knygą, kurios autorius yra?", "", "Styvenas Kingas", 30, moviesRound ));
+        questions.add(new Question(4, "Kiek yra pjūklo dalių?", "", "Per daug", 30, moviesRound ));
+        questions.add(new Question(5, "Kiek yra skambučio dalių (remake)?", "", "Dvi", 30, moviesRound ));
+
+        questionRepository.save(questions);
+
     }
 }

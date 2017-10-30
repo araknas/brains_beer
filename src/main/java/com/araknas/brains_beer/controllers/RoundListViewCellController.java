@@ -27,6 +27,8 @@ public class RoundListViewCellController extends ListCell<Round> {
 
     @FXML
     Label roundNameLabel;
+    @FXML
+    Label roundTypeLabel;
 
     @FXML
     GridPane roundCellGridPane;
@@ -57,6 +59,7 @@ public class RoundListViewCellController extends ListCell<Round> {
                     fxmlLoader.load();
                 }
                 roundNameLabel.setText(round.getTitle());
+                roundTypeLabel.setText(round.getRoundType().getTitle());
                 setOnMouseClicked(event -> handleMouseClick(event, round));
 
                 setText(null);

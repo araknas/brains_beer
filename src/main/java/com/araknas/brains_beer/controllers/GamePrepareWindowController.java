@@ -42,6 +42,9 @@ public class GamePrepareWindowController implements Initializable, ViewControlle
     GamesWindowController gamesWindowController;
 
     @Autowired
+    GameStartWindowController gameStartWindowController;
+
+    @Autowired
     TeamRepository teamRepository;
 
     @Autowired
@@ -84,7 +87,28 @@ public class GamePrepareWindowController implements Initializable, ViewControlle
     private Stage gamePrepareWindowStage;
 
     public void handleGamePrepareNextButtonClick(){
-        // TODO: implement
+        if(checkIfGamePrepared()){
+            gameStartWindowController.displayStartGamesWindow(
+                    this.selectedGame, this.selectedTeamsObservableList, this.selectedRoundsObservableList);
+            hideGamePrepareWindow();
+        }
+        else {
+            messageWindowController.displayMessageWindow("Pasirinkite bent dvi komandas ir bent vieną žaidimą.");
+        }
+    }
+
+    private boolean checkIfGamePrepared(){
+        boolean isPrepared = false;
+        try{
+            if(this.selectedTeamsObservableList.size() > 1 && this.selectedRoundsObservableList.size() > 0){
+                isPrepared = true;
+            }
+        }
+        catch (Exception e){
+            String error = "Exception while checking game preparation, e = " + e.getMessage();
+            messageWindowController.displayMessageWindow(error);
+        }
+        return isPrepared;
     }
 
     public void handleGamePrepareBackButtonClick(){
@@ -102,7 +126,7 @@ public class GamePrepareWindowController implements Initializable, ViewControlle
         return isShowing;
     }
 
-    public void displayGamePrepareWindow(Game selectedGame){
+    public void displayGamePrepareWindow(Game selectedGame, boolean isNeedToFetchFromDb, boolean isNeedToClear){
         try {
             if(gamePrepareWindowStage != null && !gamePrepareWindowStage.isShowing()){
                 gamePrepareWindowStage.show();
@@ -113,10 +137,10 @@ public class GamePrepareWindowController implements Initializable, ViewControlle
             this.selectedGame = selectedGame;
 
             reloadSelectedGameData();
-            reloadAllTeamsListView(true, true);
-            reloadAllRoundsListView(true, true);
-            reloadSelectedTeamsListView(true, true);
-            reloadSelectedRoundsListView(true, true);
+            reloadAllTeamsListView(isNeedToFetchFromDb, isNeedToClear);
+            reloadAllRoundsListView(isNeedToFetchFromDb, isNeedToClear);
+            reloadSelectedTeamsListView(isNeedToFetchFromDb, isNeedToClear);
+            reloadSelectedRoundsListView(isNeedToFetchFromDb, isNeedToClear);
         }
         catch (Exception e){
             logger.error("Exception while displaying Game Prepare Window, e = " + e.getMessage(), e);
