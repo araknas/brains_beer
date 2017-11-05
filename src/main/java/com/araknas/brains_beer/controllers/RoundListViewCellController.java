@@ -80,6 +80,15 @@ public class RoundListViewCellController extends ListCell<Round> {
                 logger.info("Mouse click on " + round.getTitle());
             }
         }
+
+        if(parentController instanceof GameStartWindowController){
+            boolean isGameStartWindowController =
+                    ((GameStartWindowController) parentController).checkIfGameStartWindowIsShowing();
+            if(isGameStartWindowController){
+                handleMouseClickFromGameStartWindow(event, round);
+                logger.info("Mouse click on " + round.getTitle());
+            }
+        }
     }
 
     private void handleMouseClickFromGamePrepareWindow(MouseEvent event, Round round) {
@@ -94,6 +103,18 @@ public class RoundListViewCellController extends ListCell<Round> {
                     ((GamePrepareWindowController) parentController).transferRoundToAllRounds(round);
                 }
             }
+        }
+        catch (Exception e){
+            String error = "Exception while handling mouse click e = " + e.getMessage();
+            logger.error(error);
+        }
+
+    }
+
+    private void handleMouseClickFromGameStartWindow(MouseEvent event, Round round) {
+
+        try{
+            ((GameStartWindowController) parentController).setSelectedRound(round);
         }
         catch (Exception e){
             String error = "Exception while handling mouse click e = " + e.getMessage();

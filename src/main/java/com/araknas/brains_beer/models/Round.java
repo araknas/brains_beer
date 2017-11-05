@@ -1,6 +1,7 @@
 package com.araknas.brains_beer.models;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -19,12 +20,12 @@ public class Round {
     private RoundType roundType;
 
     @OneToMany(mappedBy = "round", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Set<Question> questions;
+    private List<Question> questions;
 
     public Round() {
     }
 
-    public Round(String title, RoundType roundType, Set<Question> questions) {
+    public Round(String title, RoundType roundType, List<Question> questions) {
         this.title = title;
         this.roundType = roundType;
         this.questions = questions;
@@ -55,11 +56,11 @@ public class Round {
         this.roundType = roundType;
     }
 
-    public Set<Question> getQuestions() {
+    public List<Question> getQuestions() {
         return questions;
     }
 
-    public void setQuestions(Set<Question> questions) {
+    public void setQuestions(List<Question> questions) {
         this.questions = questions;
     }
 }

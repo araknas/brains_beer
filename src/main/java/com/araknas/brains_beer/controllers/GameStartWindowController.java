@@ -2,6 +2,7 @@ package com.araknas.brains_beer.controllers;
 
 import com.araknas.brains_beer.models.Game;
 import com.araknas.brains_beer.models.Round;
+import com.araknas.brains_beer.models.RoundType;
 import com.araknas.brains_beer.models.Team;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
@@ -39,6 +40,9 @@ public class GameStartWindowController implements Initializable, ViewController{
     GamePrepareWindowController gamePrepareWindowController;
 
     @Autowired
+    BlitzRoundWindowController blitzRoundWindowController;
+
+    @Autowired
     MessageWindowController messageWindowController;
 
     @FXML
@@ -50,6 +54,7 @@ public class GameStartWindowController implements Initializable, ViewController{
     private Stage startGameWindowStage;
 
     private Game selectedGame;
+    private Round selectedRound;
     private ObservableList<Round> selectedRoundsObservableList;
     private ObservableList<Team> selectedTeamsObservableList;
 
@@ -59,7 +64,30 @@ public class GameStartWindowController implements Initializable, ViewController{
     }
 
     public void handleStartGameNextButtonClick(){
+        try{
+            if(selectedRound != null){
+                loadSelectedRound();
+            }
+            else{
+                messageWindowController.displayMessageWindow("Psirinkite turą!");
+            }
+        }
+        catch (Exception e){
+            String error = "Exception while loading selected round data, e = " + e.getMessage();
+            logger.error(error + e.getMessage(), e);
+            messageWindowController.displayMessageWindow(error);
+        }
+    }
 
+    private void loadSelectedRound() throws Exception{
+        RoundType roundType = selectedRound.getRoundType();
+        switch (roundType.getTitle()){
+            case "Blitz":
+                blitzRoundWindowController.displayBlitzRoundWindow(
+                        selectedGame, selectedRound, selectedTeamsObservableList);
+                break;
+            default: messageWindowController.displayMessageWindow("Round type is not implemented");
+        }
     }
 
     public void handleStartGameBackButtonClick(){
@@ -135,5 +163,23 @@ public class GameStartWindowController implements Initializable, ViewController{
             logger.error(error + e.getMessage(), e);
             messageWindowController.displayMessageWindow(error);
         }
+    }
+
+    public boolean checkIfGameStartWindowIsShowing(){
+
+        boolean isShowing = false;
+        if(startGameWindowStage != null && startGameWindowStage.isShowing()){
+            isShowing = true;
+        }
+
+        return isShowing;
+    }
+
+    public Round getSelectedRound() {
+        return selectedRound;
+    }
+
+    public void setSelectedRound(Round selectedRound) {
+        this.selectedRound = selectedRound;
     }
 }
