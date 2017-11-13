@@ -16,12 +16,23 @@ public class Question {
     private String answerVariationsText;
     private String realAnswerText;
     private Integer timeToAnswer;
+    private String imageUrl;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "round_id")
     private Round round;
 
     public Question() {
+    }
+
+    public Question(Integer questionNumber, String questionText, String answerVariationsText, String realAnswerText, Integer timeToAnswer, Round round, String imageUrl) {
+        this.questionNumber = questionNumber;
+        this.questionText = questionText;
+        this.answerVariationsText = answerVariationsText;
+        this.realAnswerText = realAnswerText;
+        this.timeToAnswer = timeToAnswer;
+        this.round = round;
+        this.imageUrl = imageUrl;
     }
 
     public Question(Integer questionNumber, String questionText, String answerVariationsText, String realAnswerText, Integer timeToAnswer, Round round) {
@@ -87,5 +98,13 @@ public class Question {
 
     public void setRound(Round round) {
         this.round = round;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

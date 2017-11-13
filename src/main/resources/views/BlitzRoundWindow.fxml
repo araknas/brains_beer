@@ -95,7 +95,7 @@
           <RowConstraints maxHeight="328.0" minHeight="10.0" prefHeight="305.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <GridPane fx:id="team1GridPanel" gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="230.0" style="-fx-background-color: #CD6155;">
+            <GridPane fx:id="team1GridPane" gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="230.0" style="-fx-background-color: #CD6155;">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
@@ -108,7 +108,8 @@
                <children>
                   <Pane prefHeight="44.0" prefWidth="230.0" GridPane.rowIndex="1">
                      <children>
-                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Travoltos" textFill="#0023eb">
+                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Travoltos" textFill="#0023eb"
+                                fx:id="team1CardTeamLabel">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -140,7 +141,8 @@
                               <Image url="@../images/Greaser_Rick.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="14.0" layoutY="14.0" text="I">
+                        <Label layoutX="14.0" layoutY="14.0" text="I"
+                                fx:id="team1PlaceInQueueLabel">
                            <font>
                               <Font size="46.0" />
                            </font>
@@ -149,7 +151,8 @@
                   </Pane>
                </children>
             </GridPane>
-            <GridPane gridLinesVisible="true" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="230.0" GridPane.columnIndex="1">
+            <GridPane gridLinesVisible="true" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="230.0" GridPane.columnIndex="1"
+                    fx:id="team2GridPane">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                </columnConstraints>
@@ -162,7 +165,8 @@
                <children>
                   <Pane prefHeight="44.0" prefWidth="230.0" GridPane.rowIndex="1">
                      <children>
-                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Šerifai" textFill="#0023eb">
+                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Šerifai" textFill="#0023eb"
+                               fx:id="team2CardTeamLabel">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -194,7 +198,8 @@
                               <Image url="@../images/Cowboy_Rick_Sprite.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="14.0" layoutY="14.0" text="?">
+                        <Label layoutX="14.0" layoutY="14.0" text="?"
+                                fx:id="team2PlaceInQueueLabel">
                            <font>
                               <Font size="46.0" />
                            </font>
@@ -203,7 +208,8 @@
                   </Pane>
                </children>
             </GridPane>
-            <GridPane gridLinesVisible="true" layoutX="240.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="230.0" style="-fx-background-color: #7DCEA0;" GridPane.columnIndex="2">
+            <GridPane gridLinesVisible="true" layoutX="240.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="230.0" style="-fx-background-color: #7DCEA0;" GridPane.columnIndex="2"
+                    fx:id="team3GridPane">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                </columnConstraints>
@@ -216,7 +222,8 @@
                <children>
                   <Pane prefHeight="44.0" prefWidth="230.0" GridPane.rowIndex="1">
                      <children>
-                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Vice City" textFill="#0023eb">
+                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Vice City" textFill="#0023eb"
+                               fx:id="team3CardTeamLabel">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -248,7 +255,8 @@
                               <Image url="@../images/Miami_Rick.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="14.0" layoutY="14.0" text="IV">
+                        <Label layoutX="14.0" layoutY="14.0" text="IV"
+                                fx:id="team3PlaceInQueueLabel">
                            <font>
                               <Font size="46.0" />
                            </font>
@@ -257,7 +265,8 @@
                   </Pane>
                </children>
             </GridPane>
-            <GridPane gridLinesVisible="true" layoutX="470.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="230.0" GridPane.columnIndex="3">
+            <GridPane gridLinesVisible="true" layoutX="470.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="230.0" GridPane.columnIndex="3"
+                    fx:id="team4GridPane">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                </columnConstraints>
@@ -270,7 +279,8 @@
                <children>
                   <Pane prefHeight="44.0" prefWidth="230.0" GridPane.rowIndex="1">
                      <children>
-                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Kopūstai" textFill="#0023eb">
+                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Kopūstai" textFill="#0023eb"
+                               fx:id="team4CardTeamLabel">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -302,7 +312,8 @@
                               <Image url="@../images/Junk_Yard_Rick_Sprite.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="14.0" layoutY="14.0" text="III">
+                        <Label layoutX="14.0" layoutY="14.0" text="III"
+                                fx:id="team4PlaceInQueueLabel">
                            <font>
                               <Font size="46.0" />
                            </font>
@@ -311,7 +322,8 @@
                   </Pane>
                </children>
             </GridPane>
-            <GridPane gridLinesVisible="true" layoutX="700.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="230.0" style="-fx-background-color: #F4D03F;" GridPane.columnIndex="4">
+            <GridPane gridLinesVisible="true" layoutX="700.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="230.0" style="-fx-background-color: #F4D03F;" GridPane.columnIndex="4"
+                    fx:id="team5GridPane">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                </columnConstraints>
@@ -324,7 +336,8 @@
                <children>
                   <Pane prefHeight="44.0" prefWidth="230.0" GridPane.rowIndex="1">
                      <children>
-                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Žagarėliai" textFill="#0023eb">
+                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Žagarėliai" textFill="#0023eb"
+                               fx:id="team5CardTeamLabel">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -356,7 +369,8 @@
                               <Image url="@../images/Beard_Rick.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="14.0" layoutY="14.0" text="II">
+                        <Label layoutX="14.0" layoutY="14.0" text="II"
+                                fx:id="team5PlaceInQueueLabel">
                            <font>
                               <Font size="46.0" />
                            </font>

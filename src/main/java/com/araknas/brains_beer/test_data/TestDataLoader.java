@@ -117,10 +117,10 @@ public class TestDataLoader {
 
         Round moviesRound = roundRepository.findByTitle("Filmų turas (siaubo)");
         questions = new ArrayList<>();
-        questions.add(new Question(1, "Filmo Švytėjimas autorius?", "", "Stanley Bubrick", 30, moviesRound ));
-        questions.add(new Question(2, "Psycho autorius?", "", "Alfred Hitchcock", 30, moviesRound ));
+        questions.add(new Question(1, "Filmo Švytėjimas autorius?", "", "Stanley Bubrick", 30, moviesRound, "http://trevmurphy.com/wp-content/uploads/2008/12/ebay_aceo_joker281-214x300.jpg"));
+        questions.add(new Question(2, "Psycho autorius?", "", "Alfred Hitchcock", 30, moviesRound, "http://trevmurphy.com/wp-content/uploads/2008/12/ebay_aceo_joker281-214x300.jpg" ));
         questions.add(new Question(3, "Filmas It pastatytas pagal knygą, kurios autorius yra?", "", "Styvenas Kingas", 30, moviesRound ));
-        questions.add(new Question(4, "Kiek yra pjūklo dalių?", "", "Per daug", 30, moviesRound ));
+        questions.add(new Question(4, "Kiek yra pjūklo dalių?", "", "Per daug", 30, moviesRound, "http://trevmurphy.com/wp-content/uploads/2008/12/ebay_aceo_joker281-214x300.jpg" ));
         questions.add(new Question(5, "Kiek yra skambučio dalių (remake)?", "", "Dvi", 30, moviesRound ));
 
         questionRepository.save(questions);
