@@ -40,6 +40,9 @@ public class GameStartWindowController implements Initializable, ViewController{
     GamePrepareWindowController gamePrepareWindowController;
 
     @Autowired
+    ButtonsRegistrationWindowController buttonsRegistrationWindowController;
+
+    @Autowired
     BlitzRoundWindowController blitzRoundWindowController;
 
     @Autowired
@@ -83,7 +86,10 @@ public class GameStartWindowController implements Initializable, ViewController{
         RoundType roundType = selectedRound.getRoundType();
         switch (roundType.getTitle()){
             case "Blitz":
-                blitzRoundWindowController.displayBlitzRoundWindow(
+/*                blitzRoundWindowController.displayBlitzRoundWindow(
+                        selectedGame, selectedRound, selectedTeamsObservableList);*/
+
+                buttonsRegistrationWindowController.displayButtonsRegistrationWindow(
                         selectedGame, selectedRound, selectedTeamsObservableList);
                 break;
             default: messageWindowController.displayMessageWindow("Round type is not implemented");

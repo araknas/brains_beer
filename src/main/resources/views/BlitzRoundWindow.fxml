@@ -118,7 +118,8 @@
                   </Pane>
                   <Pane prefHeight="56.0" prefWidth="230.0" GridPane.rowIndex="2">
                      <children>
-                        <Label layoutX="97.0" text="23">
+                        <Label layoutX="97.0" text="23"
+                               fx:id="team1PointsLabel">
                            <font>
                               <Font size="33.0" />
                            </font>
@@ -127,8 +128,12 @@
                   </Pane>
                   <Pane prefHeight="72.0" prefWidth="230.0" GridPane.rowIndex="3">
                      <children>
-                        <Button layoutX="50.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="NO" />
-                        <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="YES" />
+                        <Button layoutX="50.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="-"
+                                fx:id="team1PointsUpButton"
+                                onAction="#handlePointsUpButtonClick"/>
+                        <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="+"
+                                fx:id="team1PointsDownButton"
+                                onAction="#handlePointsDownButtonClick"/>
                      </children>
                      <padding>
                         <Insets top="20.0" />
@@ -175,7 +180,8 @@
                   </Pane>
                   <Pane prefHeight="56.0" prefWidth="230.0" GridPane.rowIndex="2">
                      <children>
-                        <Label layoutX="97.0" text="9">
+                        <Label layoutX="97.0" text="9"
+                               fx:id="team2PointsLabel">>
                            <font>
                               <Font size="33.0" />
                            </font>
@@ -184,8 +190,12 @@
                   </Pane>
                   <Pane prefHeight="72.0" prefWidth="230.0" GridPane.rowIndex="3">
                      <children>
-                        <Button layoutX="50.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="NO" />
-                        <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="YES" />
+                        <Button layoutX="50.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="-"
+                                fx:id="team2PointsUpButton"
+                                onAction="#handlePointsUpButtonClick"/>
+                        <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="+"
+                                fx:id="team2PointsDownButton"
+                                onAction="#handlePointsDownButtonClick"/>
                      </children>
                      <padding>
                         <Insets top="20.0" />
@@ -232,7 +242,8 @@
                   </Pane>
                   <Pane prefHeight="56.0" prefWidth="230.0" GridPane.rowIndex="2">
                      <children>
-                        <Label layoutX="97.0" text="23">
+                        <Label layoutX="97.0" text="23"
+                               fx:id="team3PointsLabel">>
                            <font>
                               <Font size="33.0" />
                            </font>
@@ -241,8 +252,12 @@
                   </Pane>
                   <Pane prefHeight="72.0" prefWidth="230.0" GridPane.rowIndex="3">
                      <children>
-                        <Button layoutX="50.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="NO" />
-                        <Button layoutX="150.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="YES" />
+                        <Button layoutX="50.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="-"
+                                fx:id="team3PointsUpButton"
+                                onAction="#handlePointsUpButtonClick"/>
+                        <Button layoutX="150.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="+"
+                                fx:id="team3PointsDownButton"
+                                onAction="#handlePointsDownButtonClick"/>
                      </children>
                      <padding>
                         <Insets top="20.0" />
@@ -289,7 +304,8 @@
                   </Pane>
                   <Pane prefHeight="56.0" prefWidth="230.0" GridPane.rowIndex="2">
                      <children>
-                        <Label layoutX="97.0" text="17">
+                        <Label layoutX="97.0" text="17"
+                               fx:id="team4PointsLabel">>
                            <font>
                               <Font size="33.0" />
                            </font>
@@ -298,8 +314,12 @@
                   </Pane>
                   <Pane prefHeight="72.0" prefWidth="230.0" GridPane.rowIndex="3">
                      <children>
-                        <Button layoutX="50.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="NO" />
-                        <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="YES" />
+                        <Button layoutX="50.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="-"
+                                fx:id="team4PointsUpButton"
+                                onAction="#handlePointsUpButtonClick"/>
+                        <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="+"
+                                fx:id="team4PointsDownButton"
+                                onAction="#handlePointsDownButtonClick"/>
                      </children>
                      <padding>
                         <Insets top="20.0" />
@@ -346,7 +366,8 @@
                   </Pane>
                   <Pane prefHeight="56.0" prefWidth="230.0" GridPane.rowIndex="2">
                      <children>
-                        <Label layoutX="97.0" text="20">
+                        <Label layoutX="97.0" text="20"
+                               fx:id="team5PointsLabel">>
                            <font>
                               <Font size="33.0" />
                            </font>
@@ -355,8 +376,12 @@
                   </Pane>
                   <Pane prefHeight="72.0" prefWidth="230.0" GridPane.rowIndex="3">
                      <children>
-                        <Button layoutX="50.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="NO" />
-                        <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="YES" />
+                        <Button layoutX="50.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="-"
+                                fx:id="team5PointsUpButton"
+                                onAction="#handlePointsUpButtonClick"/>
+                        <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="+"
+                                fx:id="team5PointsDownButton"
+                                onAction="#handlePointsDownButtonClick"/>
                      </children>
                      <padding>
                         <Insets top="20.0" />

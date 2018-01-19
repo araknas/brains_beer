@@ -1,5 +1,6 @@
 package com.araknas.brains_beer.game_rounds.blitz;
 
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 
@@ -11,11 +12,26 @@ public class BlitzTeamCardLayoutSet {
     private GridPane cardGridPane;
     private Label teamNameLabel;
     private Label teamPlaceInQueueLabel;
+    private Label teamPointsLabel;
+    private Button teamPointsUpButton;
+    private Button teamPointsDownButton;
 
-    public BlitzTeamCardLayoutSet(GridPane cardGridPane, Label teamNameLabel, Label teamPlaceInQueueLabel) {
+
+    public BlitzTeamCardLayoutSet(
+            GridPane cardGridPane,
+            Label teamNameLabel,
+            Label teamPlaceInQueueLabel,
+            Label teamPointsLabel,
+            Button teamPointsUpButton,
+            Button teamPointsDownButton)
+    {
         this.cardGridPane = cardGridPane;
         this.teamNameLabel = teamNameLabel;
         this.teamPlaceInQueueLabel = teamPlaceInQueueLabel;
+        this.teamPointsLabel = teamPointsLabel;
+
+        this.teamPointsUpButton = teamPointsUpButton;
+        this.teamPointsDownButton = teamPointsDownButton;
     }
 
     public Label getTeamPlaceInQueueLabel() {
@@ -40,5 +56,29 @@ public class BlitzTeamCardLayoutSet {
 
     public void setTeamNameLabel(Label teamNameLabel) {
         this.teamNameLabel = teamNameLabel;
+    }
+
+    public Label getTeamPointsLabel() {
+        return teamPointsLabel;
+    }
+
+    public void setTeamPointsLabel(Label teamPointsLabel) {
+        this.teamPointsLabel = teamPointsLabel;
+    }
+
+    public Button getTeamPointsUpButton() {
+        return teamPointsUpButton;
+    }
+
+    public void setTeamPointsUpButton(Button teamPointsUpButton) {
+        this.teamPointsUpButton = teamPointsUpButton;
+    }
+
+    public Button getTeamPointsDownButton() {
+        return teamPointsDownButton;
+    }
+
+    public void setTeamPointsDownButton(Button teamPointsDownButton) {
+        this.teamPointsDownButton = teamPointsDownButton;
     }
 }

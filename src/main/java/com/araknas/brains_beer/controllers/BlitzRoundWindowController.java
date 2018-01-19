@@ -8,6 +8,7 @@ import com.araknas.brains_beer.models.Round;
 import com.araknas.brains_beer.models.Team;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -97,6 +98,40 @@ public class BlitzRoundWindowController implements ViewController, Initializable
     @FXML
     Label team5PlaceInQueueLabel;
 
+    @FXML
+    Label team1PointsLabel;
+    @FXML
+    Label team2PointsLabel;
+    @FXML
+    Label team3PointsLabel;
+    @FXML
+    Label team4PointsLabel;
+    @FXML
+    Label team5PointsLabel;
+
+    @FXML
+    Button team1PointsUpButton;
+    @FXML
+    Button team2PointsUpButton;
+    @FXML
+    Button team3PointsUpButton;
+    @FXML
+    Button team4PointsUpButton;
+    @FXML
+    Button team5PointsUpButton;
+
+    @FXML
+    Button team1PointsDownButton;
+    @FXML
+    Button team2PointsDownButton;
+    @FXML
+    Button team3PointsDownButton;
+    @FXML
+    Button team4PointsDownButton;
+    @FXML
+    Button team5PointsDownButton;
+
+
     HashMap<Integer, BlitzTeamCardModel> teamCardMap = new HashMap<>();
 
     private Game game;
@@ -104,6 +139,8 @@ public class BlitzRoundWindowController implements ViewController, Initializable
     private List<Question> questions;
     int questionIndex = -1;
     private ObservableList<Team> teamsObservableList;
+    private HashMap<Integer, String> teamButtonMap = new HashMap<>();
+    private HashMap<Integer, Integer> teamPointsMap = new HashMap<>();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -157,7 +194,8 @@ public class BlitzRoundWindowController implements ViewController, Initializable
     public void displayBlitzRoundWindow(
             Game game,
             Round round,
-            ObservableList<Team> teamsObservableList){
+            ObservableList<Team> teamsObservableList,
+            HashMap<Integer, String> teamButtonMap){
 
         try {
             if(blitzRoundWindowStage != null && !blitzRoundWindowStage.isShowing()){
@@ -169,6 +207,7 @@ public class BlitzRoundWindowController implements ViewController, Initializable
             this.game = game;
             this.round = round;
             this.teamsObservableList = teamsObservableList;
+            this.teamButtonMap = teamButtonMap;
 
             reloadRoundData();
             prepareTeamCards();
@@ -194,8 +233,10 @@ public class BlitzRoundWindowController implements ViewController, Initializable
             blitzTeamCardModel.getBlitzTeamCardLayoutSet().getCardGridPane().setStyle("-fx-background-color: #FFFFFF;");
             blitzTeamCardModel.getBlitzTeamCardLayoutSet().getTeamPlaceInQueueLabel().setText("?");
             blitzTeamCardModel.getBlitzTeamCardLayoutSet().getTeamNameLabel().setText(team.getName());
-        }
 
+            int points = teamPointsMap.get(teamId);
+            blitzTeamCardModel.getBlitzTeamCardLayoutSet().getTeamPointsLabel().setText(String.valueOf(points));
+        }
     }
 
     private void reloadRoundData() {
@@ -205,6 +246,7 @@ public class BlitzRoundWindowController implements ViewController, Initializable
                 questions = round.getQuestions();
                 questionIndex = -1;
                 constructTeamCardMap(teamsObservableList);
+                constructTeamPointsMap(teamsObservableList);
             }
         }
         catch (Exception e){
@@ -212,6 +254,14 @@ public class BlitzRoundWindowController implements ViewController, Initializable
             logger.error(error + e.getMessage(), e);
             messageWindowController.displayMessageWindow(error);
         }
+    }
+
+    private void constructTeamPointsMap(ObservableList<Team> teamsObservableList) throws Exception{
+        logger.info("Constructing team points map");
+        for(Team team : teamsObservableList){
+           teamPointsMap.put(team.getId(), 0);
+        }
+
     }
 
     private void constructTeamCardMap(ObservableList<Team> teamsObservableList) throws Exception{
@@ -236,29 +286,29 @@ public class BlitzRoundWindowController implements ViewController, Initializable
 
         ArrayList<BlitzTeamCardLayoutSet> list = new ArrayList<>();
         if(teamListSize == 1){
-            list.add(new BlitzTeamCardLayoutSet(team1GridPane,team1CardTeamLabel,team1PlaceInQueueLabel));
+            list.add(new BlitzTeamCardLayoutSet(team1GridPane,team1CardTeamLabel,team1PlaceInQueueLabel, team1PointsLabel, team1PointsUpButton, team1PointsDownButton));
         }
         else if(teamListSize == 2){
-            list.add(new BlitzTeamCardLayoutSet(team2GridPane,team2CardTeamLabel, team2PlaceInQueueLabel));
-            list.add(new BlitzTeamCardLayoutSet(team4GridPane,team4CardTeamLabel, team4PlaceInQueueLabel));
+            list.add(new BlitzTeamCardLayoutSet(team2GridPane,team2CardTeamLabel, team2PlaceInQueueLabel, team2PointsLabel, team2PointsUpButton, team2PointsDownButton));
+            list.add(new BlitzTeamCardLayoutSet(team4GridPane,team4CardTeamLabel, team4PlaceInQueueLabel, team4PointsLabel, team4PointsUpButton, team4PointsDownButton));
         }
         else if(teamListSize == 3){
-            list.add(new BlitzTeamCardLayoutSet(team1GridPane,team1CardTeamLabel, team1PlaceInQueueLabel));
-            list.add(new BlitzTeamCardLayoutSet(team3GridPane,team3CardTeamLabel, team3PlaceInQueueLabel));
-            list.add(new BlitzTeamCardLayoutSet(team5GridPane,team5CardTeamLabel, team5PlaceInQueueLabel));
+            list.add(new BlitzTeamCardLayoutSet(team1GridPane,team1CardTeamLabel, team1PlaceInQueueLabel, team1PointsLabel, team1PointsUpButton, team1PointsDownButton));
+            list.add(new BlitzTeamCardLayoutSet(team3GridPane,team3CardTeamLabel, team3PlaceInQueueLabel, team3PointsLabel, team3PointsUpButton, team3PointsDownButton));
+            list.add(new BlitzTeamCardLayoutSet(team5GridPane,team5CardTeamLabel, team5PlaceInQueueLabel, team5PointsLabel, team5PointsUpButton, team5PointsDownButton));
         }
         else if(teamListSize == 4){
-            list.add(new BlitzTeamCardLayoutSet(team1GridPane,team1CardTeamLabel,team1PlaceInQueueLabel));
-            list.add(new BlitzTeamCardLayoutSet(team2GridPane,team2CardTeamLabel, team2PlaceInQueueLabel));
-            list.add(new BlitzTeamCardLayoutSet(team4GridPane,team4CardTeamLabel, team4PlaceInQueueLabel));
-            list.add(new BlitzTeamCardLayoutSet(team5GridPane,team5CardTeamLabel, team5PlaceInQueueLabel));
+            list.add(new BlitzTeamCardLayoutSet(team1GridPane,team1CardTeamLabel,team1PlaceInQueueLabel, team1PointsLabel, team1PointsUpButton, team1PointsDownButton));
+            list.add(new BlitzTeamCardLayoutSet(team2GridPane,team2CardTeamLabel, team2PlaceInQueueLabel, team2PointsLabel, team2PointsUpButton, team2PointsDownButton));
+            list.add(new BlitzTeamCardLayoutSet(team4GridPane,team4CardTeamLabel, team4PlaceInQueueLabel, team4PointsLabel, team4PointsUpButton, team4PointsDownButton));
+            list.add(new BlitzTeamCardLayoutSet(team5GridPane,team5CardTeamLabel, team5PlaceInQueueLabel, team5PointsLabel, team5PointsUpButton, team5PointsDownButton));
         }
         else if (teamListSize == 5){
-            list.add(new BlitzTeamCardLayoutSet(team1GridPane,team1CardTeamLabel, team1PlaceInQueueLabel));
-            list.add(new BlitzTeamCardLayoutSet(team2GridPane,team2CardTeamLabel, team2PlaceInQueueLabel));
-            list.add(new BlitzTeamCardLayoutSet(team3GridPane,team3CardTeamLabel, team3PlaceInQueueLabel));
-            list.add(new BlitzTeamCardLayoutSet(team4GridPane,team4CardTeamLabel, team4PlaceInQueueLabel));
-            list.add(new BlitzTeamCardLayoutSet(team5GridPane,team5CardTeamLabel, team5PlaceInQueueLabel));
+            list.add(new BlitzTeamCardLayoutSet(team1GridPane,team1CardTeamLabel, team1PlaceInQueueLabel, team1PointsLabel, team1PointsUpButton, team1PointsDownButton));
+            list.add(new BlitzTeamCardLayoutSet(team2GridPane,team2CardTeamLabel, team2PlaceInQueueLabel, team2PointsLabel, team2PointsUpButton, team2PointsDownButton));
+            list.add(new BlitzTeamCardLayoutSet(team3GridPane,team3CardTeamLabel, team3PlaceInQueueLabel, team3PointsLabel, team3PointsUpButton, team3PointsDownButton));
+            list.add(new BlitzTeamCardLayoutSet(team4GridPane,team4CardTeamLabel, team4PlaceInQueueLabel, team4PointsLabel, team4PointsUpButton, team4PointsDownButton));
+            list.add(new BlitzTeamCardLayoutSet(team5GridPane,team5CardTeamLabel, team5PlaceInQueueLabel, team5PointsLabel, team5PointsUpButton, team5PointsDownButton));
         }
         else{
             throw (new Exception("Incorrect number of teams (" + teamListSize + ")"));
@@ -296,5 +346,26 @@ public class BlitzRoundWindowController implements ViewController, Initializable
             }
         });
         blitzRoundWindowStage.show();
+    }
+
+    public void handlePointsUpButtonClick(ActionEvent event){
+        try{
+            Object source = event.getSource();
+            //TODO: identify team id and increase points
+        }catch (Exception e){
+            logger.error("Exception while handling points up button, e = " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    public void handlePointsDownButtonClick(ActionEvent event){
+        try{
+            Object source = event.getSource();
+            //TODO: identify team id and decrease points
+
+        }catch (Exception e){
+            logger.error("Exception while handling points down button, e = " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 }
