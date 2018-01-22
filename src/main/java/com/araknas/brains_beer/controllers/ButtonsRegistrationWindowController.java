@@ -99,6 +99,9 @@ public class ButtonsRegistrationWindowController {
         fxmlLoader.setControllerFactory(springContext::getBean);
         Parent parent = fxmlLoader.load();
 
+        teamButtonMap.clear();
+        teamCounter = 0;
+
         Team currentTeam = teamsObservableList.get(teamCounter);
         if(currentTeam != null){
             teamLabel.setText(currentTeam.getName());
@@ -123,11 +126,10 @@ public class ButtonsRegistrationWindowController {
         buttonsRegistrationWindowStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent t) {
-                Platform.exit();
-                System.exit(0);
+                System.out.println("Buttons Registration Stage is closing");
+                buttonsRegistrationWindowStage = null;
             }
         });
-
 
         buttonsRegistrationWindowStage.show();
     }
@@ -189,6 +191,8 @@ public class ButtonsRegistrationWindowController {
             else{
                 blitzRoundWindowController.displayBlitzRoundWindow(
                         game, round, teamsObservableList, teamButtonMap);
+                buttonsRegistrationWindowStage.close();
+                buttonsRegistrationWindowStage = null;
             }
         }
         catch (Exception e){

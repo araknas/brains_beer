@@ -20,6 +20,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -29,7 +30,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
 
-import javax.imageio.ImageIO;
 import java.net.URL;
 import java.util.*;
 
@@ -51,6 +51,10 @@ public class BlitzRoundWindowController implements ViewController, Initializable
     ConfigurableApplicationContext springContext;
 
     private Stage blitzRoundWindowStage;
+
+    private boolean isListeningForClicks = false;
+    private Stack<Integer> answeringStack = new Stack<>();
+    private HashMap<Integer, Integer> answeringTeamMap = new HashMap<>();
 
     @FXML
     Button blitzBackButton;
@@ -153,12 +157,36 @@ public class BlitzRoundWindowController implements ViewController, Initializable
                 questionIndex++;
                 Question currentQuestion = questions.get(questionIndex);
                 blitzQuestionTextArea.setText(currentQuestion.getQuestionText());
+
+                resetAnsweringStack();
+                resetTeamCards();
+
+                isListeningForClicks = true;
                 Image image = receiveQuestionImage(currentQuestion);
                 blitzQuestionImageView.setImage(image);
             }
         }
         catch (Exception e){
             logger.error("Exception while handling Blitz next question, e = " + e.getMessage(), e);
+        }
+    }
+
+    private void resetTeamCards() throws Exception{
+        for(Map.Entry<Integer, BlitzTeamCardModel> entry : teamCardMap.entrySet()){
+            BlitzTeamCardModel blitzTeamCardModel = entry.getValue();
+            blitzTeamCardModel.getBlitzTeamCardLayoutSet().getTeamPlaceInQueueLabel().setText("?");
+            blitzTeamCardModel.getBlitzTeamCardLayoutSet().getCardGridPane().setStyle("-fx-background-color: #FFFFFF;");
+        }
+    }
+
+    private void resetAnsweringStack() throws Exception{
+
+        answeringTeamMap.clear();
+        int teamCount = teamsObservableList.size();
+        answeringStack.empty();
+
+        for(int i = teamCount; i > 0; i--){
+            answeringStack.push(i);
         }
     }
 
@@ -182,6 +210,11 @@ public class BlitzRoundWindowController implements ViewController, Initializable
             if(questionIndex >= 1 && questionIndex < questions.size()){
                 questionIndex--;
                 Question currentQuestion = questions.get(questionIndex);
+
+                resetAnsweringStack();
+                resetTeamCards();
+
+                isListeningForClicks = true;
                 blitzQuestionTextArea.setText(currentQuestion.getQuestionText());
                 //TODO: set image
             }
@@ -331,7 +364,17 @@ public class BlitzRoundWindowController implements ViewController, Initializable
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/BlitzRoundWindow.fxml"));
         fxmlLoader.setControllerFactory(springContext::getBean);
+
         Parent blitzWindowParent = fxmlLoader.load();
+        blitzWindowParent.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent event) {
+
+                logger.info("Pressed:"  + event.getCode());
+                handlePlayerPressEvent(event);
+            }
+        });
+
 
         blitzRoundWindowStage = new Stage();
         blitzRoundWindowStage.setTitle("Start Blitz round Window");
@@ -341,8 +384,8 @@ public class BlitzRoundWindowController implements ViewController, Initializable
         blitzRoundWindowStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent t) {
-                Platform.exit();
-                System.exit(0);
+                logger.info("Closing Blitz window");
+                blitzRoundWindowStage = null;
             }
         });
         blitzRoundWindowStage.show();
@@ -350,8 +393,13 @@ public class BlitzRoundWindowController implements ViewController, Initializable
 
     public void handlePointsUpButtonClick(ActionEvent event){
         try{
-            Object source = event.getSource();
-            //TODO: identify team id and increase points
+            Button source = (Button) event.getSource();
+            String buttonId = source.getId();
+            Label pointsLabel = getPointsLabelByButtonId(buttonId);
+            Integer points = Integer.valueOf(pointsLabel.getText());
+            points++;
+            pointsLabel.setText(String.valueOf(points));
+
         }catch (Exception e){
             logger.error("Exception while handling points up button, e = " + e.getMessage());
             e.printStackTrace();
@@ -360,12 +408,93 @@ public class BlitzRoundWindowController implements ViewController, Initializable
 
     public void handlePointsDownButtonClick(ActionEvent event){
         try{
-            Object source = event.getSource();
-            //TODO: identify team id and decrease points
+            Button source = (Button) event.getSource();
+            String buttonId = source.getId();
+            Label pointsLabel = getPointsLabelByButtonId(buttonId);
+            Integer points = Integer.valueOf(pointsLabel.getText());
+            if(points > 0){
+                points--;
+            }
+            pointsLabel.setText(String.valueOf(points));
 
         }catch (Exception e){
             logger.error("Exception while handling points down button, e = " + e.getMessage());
             e.printStackTrace();
         }
+    }
+
+
+    private Label getPointsLabelByButtonId(String buttonId) {
+
+        Label pointsLabel = null;
+
+        if(buttonId.contains("1")){
+            pointsLabel = team1PointsLabel;
+        }
+        else if (buttonId.contains("2")){
+            pointsLabel = team2PointsLabel;
+        }
+        else if (buttonId.contains("3")){
+            pointsLabel = team3PointsLabel;
+        }
+        else if (buttonId.contains("4")){
+            pointsLabel = team4PointsLabel;
+        }
+        else if (buttonId.contains("5")){
+            pointsLabel = team5PointsLabel;
+        }
+        return pointsLabel;
+    }
+
+    private void handlePlayerPressEvent(KeyEvent event){
+
+        try{
+            Date clickTime = new Date();
+
+            if(isListeningForClicks){
+                String buttonCode = event.getText();
+                for(Map.Entry<Integer, String> entry : teamButtonMap.entrySet()){
+                    if(entry.getValue().equals(buttonCode)){
+                        int teamId = entry.getKey();
+                        putTeamIntoTheAnsweringQueue(teamId);
+                    }
+                }
+            }
+        }
+        catch (Exception e){
+            String error = "Exception while handling player press event, e = " + e.getMessage();
+            logger.error(error);
+            e.printStackTrace();
+        }
+
+    }
+
+    private void putTeamIntoTheAnsweringQueue(int teamId) throws Exception{
+
+        // Checks if team is not already put into the queue
+        if(!answeringTeamMap.containsKey(teamId)){
+
+            int answeringNumber = answeringStack.pop();
+            BlitzTeamCardModel blitzTeamCardModel = teamCardMap.get(teamId);
+            answeringTeamMap.put(teamId, answeringNumber);
+
+            blitzTeamCardModel.
+                    getBlitzTeamCardLayoutSet().
+                    getTeamPlaceInQueueLabel().
+                    setText(String.valueOf(answeringNumber));
+
+            if(answeringNumber == 1){
+                blitzTeamCardModel.getBlitzTeamCardLayoutSet().getCardGridPane().setStyle("-fx-background-color: #E94815;");
+            }
+
+            if(answeringStack.isEmpty()){
+                isListeningForClicks = false;
+            }
+        }
+    }
+
+    public void handleBlitzEndButtonClick(){
+        logger.info("Closing Blitz Game...");
+        blitzRoundWindowStage.close();
     }
 }

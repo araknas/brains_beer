@@ -32,7 +32,7 @@
           <RowConstraints maxHeight="197.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextArea editable="false" prefHeight="353.0" prefWidth="1150.0" text="1. Ar tiesa, kad Čakas Norisas dalijasi iš nulio?"
+            <TextArea editable="false" prefHeight="353.0" prefWidth="1150.0" text="Spaukite 'Kitas', kad pradėtumėte turą :)"
                     fx:id="blitzQuestionTextArea">
                <font>
                   <Font size="32.0" />
@@ -59,7 +59,7 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </GridPane.margin>
                <image>
-                  <Image url="@../images/18_chucknorris_lgl.jpg" />
+                  <!--<Image url="@../images/18_chucknorris_lgl.jpg" />-->
                </image>
             </ImageView>
          </children>
@@ -74,7 +74,8 @@
         </rowConstraints>
          <children>
             <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Baigti" GridPane.columnIndex="1" GridPane.halignment="RIGHT"
-                    fx:id="blitzEndButton"/>
+                    fx:id="blitzEndButton"
+                    onAction="#handleBlitzEndButtonClick"/>
             <Label text="Čako noriso turas" GridPane.halignment="LEFT"
                     fx:id="blitzRoundNameLabel">
                <font>
@@ -108,7 +109,7 @@
                <children>
                   <Pane prefHeight="44.0" prefWidth="230.0" GridPane.rowIndex="1">
                      <children>
-                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Travoltos" textFill="#0023eb"
+                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Travoltos" textFill="#0A0A09"
                                 fx:id="team1CardTeamLabel">
                            <font>
                               <Font size="18.0" />
@@ -129,11 +130,11 @@
                   <Pane prefHeight="72.0" prefWidth="230.0" GridPane.rowIndex="3">
                      <children>
                         <Button layoutX="50.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="-"
-                                fx:id="team1PointsUpButton"
-                                onAction="#handlePointsUpButtonClick"/>
-                        <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="+"
                                 fx:id="team1PointsDownButton"
                                 onAction="#handlePointsDownButtonClick"/>
+                        <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="+"
+                                fx:id="team1PointsUpButton"
+                                onAction="#handlePointsUpButtonClick"/>
                      </children>
                      <padding>
                         <Insets top="20.0" />
@@ -170,7 +171,7 @@
                <children>
                   <Pane prefHeight="44.0" prefWidth="230.0" GridPane.rowIndex="1">
                      <children>
-                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Šerifai" textFill="#0023eb"
+                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Šerifai" textFill="#0A0A09"
                                fx:id="team2CardTeamLabel">
                            <font>
                               <Font size="18.0" />
@@ -191,11 +192,11 @@
                   <Pane prefHeight="72.0" prefWidth="230.0" GridPane.rowIndex="3">
                      <children>
                         <Button layoutX="50.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="-"
-                                fx:id="team2PointsUpButton"
-                                onAction="#handlePointsUpButtonClick"/>
-                        <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="+"
                                 fx:id="team2PointsDownButton"
                                 onAction="#handlePointsDownButtonClick"/>
+                        <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="+"
+                                fx:id="team2PointsUpButton"
+                                onAction="#handlePointsUpButtonClick"/>
                      </children>
                      <padding>
                         <Insets top="20.0" />
@@ -232,7 +233,7 @@
                <children>
                   <Pane prefHeight="44.0" prefWidth="230.0" GridPane.rowIndex="1">
                      <children>
-                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Vice City" textFill="#0023eb"
+                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Vice City" textFill="#0A0A09"
                                fx:id="team3CardTeamLabel">
                            <font>
                               <Font size="18.0" />
@@ -253,11 +254,11 @@
                   <Pane prefHeight="72.0" prefWidth="230.0" GridPane.rowIndex="3">
                      <children>
                         <Button layoutX="50.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="-"
-                                fx:id="team3PointsUpButton"
-                                onAction="#handlePointsUpButtonClick"/>
-                        <Button layoutX="150.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="+"
                                 fx:id="team3PointsDownButton"
                                 onAction="#handlePointsDownButtonClick"/>
+                        <Button layoutX="150.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="+"
+                                fx:id="team3PointsUpButton"
+                                onAction="#handlePointsUpButtonClick"/>
                      </children>
                      <padding>
                         <Insets top="20.0" />
@@ -294,7 +295,7 @@
                <children>
                   <Pane prefHeight="44.0" prefWidth="230.0" GridPane.rowIndex="1">
                      <children>
-                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Kopūstai" textFill="#0023eb"
+                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Kopūstai" textFill="#0A0A09"
                                fx:id="team4CardTeamLabel">
                            <font>
                               <Font size="18.0" />
@@ -315,11 +316,11 @@
                   <Pane prefHeight="72.0" prefWidth="230.0" GridPane.rowIndex="3">
                      <children>
                         <Button layoutX="50.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="-"
-                                fx:id="team4PointsUpButton"
-                                onAction="#handlePointsUpButtonClick"/>
-                        <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="+"
                                 fx:id="team4PointsDownButton"
                                 onAction="#handlePointsDownButtonClick"/>
+                        <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="+"
+                                fx:id="team4PointsUpButton"
+                                onAction="#handlePointsUpButtonClick"/>
                      </children>
                      <padding>
                         <Insets top="20.0" />
@@ -356,7 +357,7 @@
                <children>
                   <Pane prefHeight="44.0" prefWidth="230.0" GridPane.rowIndex="1">
                      <children>
-                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Žagarėliai" textFill="#0023eb"
+                        <Label alignment="CENTER" layoutX="78.0" layoutY="14.0" text="Žagarėliai" textFill="#0A0A09"
                                fx:id="team5CardTeamLabel">
                            <font>
                               <Font size="18.0" />
@@ -377,11 +378,11 @@
                   <Pane prefHeight="72.0" prefWidth="230.0" GridPane.rowIndex="3">
                      <children>
                         <Button layoutX="50.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="-"
-                                fx:id="team5PointsUpButton"
-                                onAction="#handlePointsUpButtonClick"/>
-                        <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="+"
                                 fx:id="team5PointsDownButton"
                                 onAction="#handlePointsDownButtonClick"/>
+                        <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="+"
+                                fx:id="team5PointsUpButton"
+                                onAction="#handlePointsUpButtonClick"/>
                      </children>
                      <padding>
                         <Insets top="20.0" />
