@@ -30,6 +30,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
 
+import javax.swing.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.*;
 
@@ -62,6 +66,10 @@ public class BlitzRoundWindowController implements ViewController, Initializable
     Button blitzNextButton;
     @FXML
     Button blitzEndButton;
+    @FXML
+    Button answerButton;
+    @FXML
+    Label answerLabel;
     @FXML
     ImageView blitzQuestionImageView;
     @FXML
@@ -162,6 +170,9 @@ public class BlitzRoundWindowController implements ViewController, Initializable
                 resetTeamCards();
 
                 isListeningForClicks = true;
+                answerLabel.setText(currentQuestion.getRealAnswerText());
+                showAnswer(false);
+
                 Image image = receiveQuestionImage(currentQuestion);
                 blitzQuestionImageView.setImage(image);
             }
@@ -194,12 +205,17 @@ public class BlitzRoundWindowController implements ViewController, Initializable
 
         Image image = null;
         try{
-            image = new Image(currentQuestion.getImageUrl());
+            //File imageFile = new File("extra_data/default_question.png");
+            File imageFile = new File(currentQuestion.getImageUrl());
+            InputStream stream = new FileInputStream(imageFile);
+            image = new Image(stream);
         }
         catch (Exception e){
             logger.error("exception while loading an image, e = " + e.getMessage());
-            //TODO: create default image
-            image = new Image("https://cdn.pixabay.com/photo/2016/10/18/18/19/question-mark-1750942_960_720.png");
+            ClassLoader classLoader = getClass().getClassLoader();
+            //TODO: save string to constants
+            InputStream defaultQuestionIconUrl = classLoader.getResourceAsStream("images/question/default_question_icon.png");
+            image = new Image(defaultQuestionIconUrl);
         }
 
         return image;
@@ -216,7 +232,11 @@ public class BlitzRoundWindowController implements ViewController, Initializable
 
                 isListeningForClicks = true;
                 blitzQuestionTextArea.setText(currentQuestion.getQuestionText());
-                //TODO: set image
+                answerLabel.setText(currentQuestion.getRealAnswerText());
+                showAnswer(false);
+
+                Image image = receiveQuestionImage(currentQuestion);
+                blitzQuestionImageView.setImage(image);
             }
         }
         catch (Exception e){
@@ -244,6 +264,7 @@ public class BlitzRoundWindowController implements ViewController, Initializable
 
             reloadRoundData();
             prepareTeamCards();
+            showAnswer(false);
         }
         catch (Exception e){
             logger.error("Exception while displaying Blitz Window, e = " + e.getMessage(), e);
@@ -466,7 +487,6 @@ public class BlitzRoundWindowController implements ViewController, Initializable
             logger.error(error);
             e.printStackTrace();
         }
-
     }
 
     private void putTeamIntoTheAnsweringQueue(int teamId) throws Exception{
@@ -497,4 +517,33 @@ public class BlitzRoundWindowController implements ViewController, Initializable
         logger.info("Closing Blitz Game...");
         blitzRoundWindowStage.close();
     }
+
+    public void handleAnswerButtonClick(){
+        try{
+            if(answerLabel.isVisible()){
+                showAnswer(false);
+            }
+            else{
+                showAnswer(true);
+            }
+        }
+        catch (Exception e){
+            String msg = "Exception showing the answer, e = " + e.getMessage();
+            messageWindowController.displayMessageWindow(msg);
+            logger.error(msg);
+        }
+    }
+
+    public void showAnswer(boolean isNeedToShowAnswer)
+            throws Exception {
+
+        answerLabel.setVisible(isNeedToShowAnswer);
+        if (isNeedToShowAnswer) {
+            answerButton.setText("Ats. (Slėpti)");
+        }
+        else{
+            answerButton.setText("Ats. (Rodyti)");
+        }
+    }
+
 }

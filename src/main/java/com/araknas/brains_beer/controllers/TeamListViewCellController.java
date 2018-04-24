@@ -15,7 +15,6 @@ import org.springframework.stereotype.Component;
 /**
  * Created by Giedrius on 2017-10-26.
  */
-@Component
 public class TeamListViewCellController extends ListCell<Team> {
 
     public static Logger logger = LoggerFactory.getLogger("brainsBeerLogger");

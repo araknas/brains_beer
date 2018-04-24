@@ -17,7 +17,6 @@ import org.springframework.stereotype.Component;
 /**
  * Created by Giedrius on 2017-10-26.
  */
-@Component
 public class RoundListViewCellController extends ListCell<Round> {
 
     public static Logger logger = LoggerFactory.getLogger("brainsBeerLogger");
