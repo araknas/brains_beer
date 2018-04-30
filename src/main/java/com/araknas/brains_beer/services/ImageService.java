@@ -11,6 +11,9 @@ import java.io.*;
 import java.net.URL;
 import java.nio.file.Files;
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * Created by Giedrius on 2018-04-05.
@@ -20,6 +23,8 @@ public class ImageService {
     public static Logger logger = LoggerFactory.getLogger("brainsBeerLogger");
     public static final String DEFAULT_IMAGE_SAVE_LOCATION = "extra_data";
     public static final int BUFFER_READER_SIZE = 1024;
+    public static final int THREAD_POOL_SIZE = 10;
+    private ExecutorService serviceRunner = Executors.newFixedThreadPool(THREAD_POOL_SIZE);
 
     @Autowired
     ConnectionService connectionService;
@@ -29,14 +34,16 @@ public class ImageService {
             String internetStatus = connectionService.checkInternetConnectionStatus();
             if(internetStatus.equals(ConnectionService.INTERNET_CONNECTION_STATUS_OK)){
 
-                boolean isAllImagesHandled = false;
+                CountDownLatch latch = new CountDownLatch(questions.size());
 
                 for(Question question : questions){
-                    // TODO: need asynchronous download
-                    boolean isNeedToOverride = true;
-                    String localUrl = downloadImageForQuestion(question, isNeedToOverride);
-                    question.setImageUrl(localUrl);
+                    serviceRunner.execute(new TaskHandler(question, latch));
                 }
+
+                logger.info("Downloading "  + questions.size() + " images...");
+                latch.await();
+                logger.info("Images have been downloaded.");
+
             }
             else{
                 logger.error("Cannot download images, no internet connection, msg = " + internetStatus);
@@ -47,6 +54,44 @@ public class ImageService {
             e.printStackTrace();
         }
         return questions;
+    }
+
+    class TaskHandler implements Runnable {
+
+        Question question;
+        CountDownLatch latch;
+        TaskHandler(Question question, CountDownLatch latch) {
+            this.question = question;
+            this.latch = latch;
+        }
+
+        public void run() {
+            manageDownloadTask(this.question, latch);
+        }
+    }
+
+    private void manageDownloadTask(Question question, CountDownLatch latch) {
+
+        int questionNumb = -1;
+        try{
+            if(question != null){
+                questionNumb = question.getQuestionNumber();
+                logger.info("Downloading image for question nr. " + questionNumb);
+
+                boolean isNeedToOverride = true;
+                String localUrl = downloadImageForQuestion(question, isNeedToOverride);
+                question.setImageUrl(localUrl);
+            }
+        }
+        catch (Exception e){
+            logger.error("Exception while downloading an image, e = " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally {
+
+            logger.info("Downloading task is finished with question nr. " +  questionNumb);
+            latch.countDown();
+        }
     }
 
     public String downloadImageForQuestion(Question question, boolean isNeedToOverride) {
