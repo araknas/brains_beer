@@ -34,3 +34,257 @@
 [INFO ] 2018-04-30 14:45:50.761 [pool-4-thread-5] brainsBeerLogger - Downloading task is finished with question nr. 5
 [INFO ] 2018-04-30 14:45:55.936 [pool-4-thread-1] brainsBeerLogger - Downloading task is finished with question nr. 1
 [INFO ] 2018-04-30 14:45:58.939 [JavaFX-Launcher] brainsBeerLogger - Images have been downloaded.
+[INFO ] 2018-04-30 16:48:41.563 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2018-04-30 16:48:41.564 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2018-04-30 16:48:41.628 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[INFO ] 2018-04-30 16:48:41.634 [JavaFX-Launcher] brainsBeerLogger - Loading test round types...
+[INFO ] 2018-04-30 16:48:41.642 [JavaFX-Launcher] brainsBeerLogger - Loading test rounds...
+[INFO ] 2018-04-30 16:48:41.877 [JavaFX-Launcher] brainsBeerLogger - Loading test questions...
+[INFO ] 2018-04-30 16:48:49.020 [JavaFX-Launcher] brainsBeerLogger - Downloading 5 images...
+[INFO ] 2018-04-30 16:48:49.020 [pool-4-thread-2] brainsBeerLogger - Downloading image for question nr. 2
+[INFO ] 2018-04-30 16:48:49.020 [pool-4-thread-1] brainsBeerLogger - Downloading image for question nr. 1
+[INFO ] 2018-04-30 16:48:49.020 [pool-4-thread-4] brainsBeerLogger - Downloading image for question nr. 4
+[INFO ] 2018-04-30 16:48:49.020 [pool-4-thread-3] brainsBeerLogger - Downloading image for question nr. 3
+[INFO ] 2018-04-30 16:48:49.020 [pool-4-thread-5] brainsBeerLogger - Downloading image for question nr. 5
+[INFO ] 2018-04-30 16:48:49.935 [pool-4-thread-4] brainsBeerLogger - Downloading task is finished with question nr. 4
+[INFO ] 2018-04-30 16:48:50.171 [pool-4-thread-3] brainsBeerLogger - Downloading task is finished with question nr. 3
+[INFO ] 2018-04-30 16:48:50.215 [pool-4-thread-2] brainsBeerLogger - Downloading task is finished with question nr. 2
+[INFO ] 2018-04-30 16:48:51.265 [pool-4-thread-5] brainsBeerLogger - Downloading task is finished with question nr. 5
+[ERROR] 2018-04-30 16:49:10.073 [pool-4-thread-1] brainsBeerLogger - Exception while downloading image with url (http://www.freepngimg.com/download/avengers/5-2-avengers-png-picture.png), e = Connection timed out: connect
+[INFO ] 2018-04-30 16:49:10.076 [pool-4-thread-1] brainsBeerLogger - Downloading task is finished with question nr. 1
+[INFO ] 2018-04-30 16:49:19.067 [JavaFX-Launcher] brainsBeerLogger - Images have been downloaded.
+[ERROR] 2018-04-30 16:51:26.166 [JavaFX-Launcher] brainsBeerLogger - Exception while importing rounds
+[INFO ] 2018-04-30 16:52:09.537 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2018-04-30 16:52:09.538 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2018-04-30 16:52:09.616 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[INFO ] 2018-04-30 16:52:09.623 [JavaFX-Launcher] brainsBeerLogger - Loading test round types...
+[INFO ] 2018-04-30 16:52:09.629 [JavaFX-Launcher] brainsBeerLogger - Loading test rounds...
+[INFO ] 2018-04-30 16:52:09.867 [JavaFX-Launcher] brainsBeerLogger - Loading test questions...
+[ERROR] 2018-04-30 16:52:38.822 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Round list cells, e = null
+[ERROR] 2018-04-30 16:52:38.841 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Round list cells, e = null
+[ERROR] 2018-04-30 16:52:38.891 [JavaFX Application Thread] brainsBeerLogger - Exception while updating Round list cells, e = null
+[INFO ] 2018-04-30 16:52:41.439 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Filmų turas (siaubo)
+[INFO ] 2018-04-30 16:57:04.543 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2018-04-30 16:57:04.544 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2018-04-30 16:57:04.627 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[INFO ] 2018-04-30 16:57:04.638 [JavaFX-Launcher] brainsBeerLogger - Loading test round types...
+[INFO ] 2018-04-30 16:57:04.646 [JavaFX-Launcher] brainsBeerLogger - Loading test rounds...
+[INFO ] 2018-04-30 16:57:04.908 [JavaFX-Launcher] brainsBeerLogger - Loading test questions...
+[INFO ] 2018-04-30 16:58:05.674 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2018-04-30 16:58:05.675 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2018-04-30 16:58:05.745 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[INFO ] 2018-04-30 16:58:05.751 [JavaFX-Launcher] brainsBeerLogger - Loading test round types...
+[INFO ] 2018-04-30 16:58:05.756 [JavaFX-Launcher] brainsBeerLogger - Loading test rounds...
+[INFO ] 2018-04-30 16:58:05.910 [JavaFX-Launcher] brainsBeerLogger - Loading test questions...
+[INFO ] 2018-04-30 17:00:05.999 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2018-04-30 17:00:06.000 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2018-04-30 17:00:06.080 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[INFO ] 2018-04-30 17:00:06.086 [JavaFX-Launcher] brainsBeerLogger - Loading test round types...
+[INFO ] 2018-04-30 17:00:06.092 [JavaFX-Launcher] brainsBeerLogger - Loading test rounds...
+[INFO ] 2018-04-30 17:00:06.245 [JavaFX-Launcher] brainsBeerLogger - Loading test questions...
+[INFO ] 2018-04-30 17:00:52.222 [JavaFX Application Thread] brainsBeerLogger - Mouse click on TestRound
+[INFO ] 2018-04-30 17:00:52.957 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Kukurūzai
+[INFO ] 2018-04-30 17:00:53.125 [JavaFX Application Thread] brainsBeerLogger - Transferring team Kukurūzai to selected ones.
+[INFO ] 2018-04-30 17:00:53.126 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Kukurūzai
+[INFO ] 2018-04-30 17:00:53.606 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Žagarėliai
+[INFO ] 2018-04-30 17:00:53.781 [JavaFX Application Thread] brainsBeerLogger - Transferring team Žagarėliai to selected ones.
+[INFO ] 2018-04-30 17:00:53.788 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Žagarėliai
+[INFO ] 2018-04-30 17:00:54.645 [JavaFX Application Thread] brainsBeerLogger - Mouse click on TestRound
+[INFO ] 2018-04-30 17:00:55.080 [JavaFX Application Thread] brainsBeerLogger - Transferring round TestRound to selected ones.
+[INFO ] 2018-04-30 17:00:55.081 [JavaFX Application Thread] brainsBeerLogger - Mouse click on TestRound
+[INFO ] 2018-04-30 17:00:57.373 [JavaFX Application Thread] brainsBeerLogger - Mouse click on TestRound
+[INFO ] 2018-04-30 17:01:00.870 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:01:01.864 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:01:02.904 [JavaFX Application Thread] brainsBeerLogger - Constructing team card map
+[INFO ] 2018-04-30 17:01:02.906 [JavaFX Application Thread] brainsBeerLogger - Constructing team points map
+[INFO ] 2018-04-30 17:01:02.906 [JavaFX Application Thread] brainsBeerLogger - Preparing team cards
+[INFO ] 2018-04-30 17:01:47.327 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:01:47.614 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:01:47.799 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:01:47.825 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:01:48.517 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:01:48.574 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:02:12.301 [JavaFX Application Thread] brainsBeerLogger - Closing Blitz Game...
+[INFO ] 2018-04-30 17:06:19.241 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2018-04-30 17:06:19.242 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2018-04-30 17:06:19.321 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[INFO ] 2018-04-30 17:06:19.332 [JavaFX-Launcher] brainsBeerLogger - Loading test round types...
+[INFO ] 2018-04-30 17:06:19.340 [JavaFX-Launcher] brainsBeerLogger - Loading test rounds...
+[INFO ] 2018-04-30 17:06:19.581 [JavaFX-Launcher] brainsBeerLogger - Loading test questions...
+[INFO ] 2018-04-30 17:06:37.965 [JavaFX Application Thread] brainsBeerLogger - Mouse click on TestRound
+[INFO ] 2018-04-30 17:06:43.828 [JavaFX Application Thread] brainsBeerLogger - Mouse click on TestRound
+[INFO ] 2018-04-30 17:06:43.973 [JavaFX Application Thread] brainsBeerLogger - Transferring round TestRound to selected ones.
+[INFO ] 2018-04-30 17:06:43.974 [JavaFX Application Thread] brainsBeerLogger - Mouse click on TestRound
+[INFO ] 2018-04-30 17:06:44.341 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Kukurūzai
+[INFO ] 2018-04-30 17:06:44.501 [JavaFX Application Thread] brainsBeerLogger - Transferring team Kukurūzai to selected ones.
+[INFO ] 2018-04-30 17:06:44.501 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Kukurūzai
+[INFO ] 2018-04-30 17:06:44.789 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Žagarėliai
+[INFO ] 2018-04-30 17:06:44.957 [JavaFX Application Thread] brainsBeerLogger - Transferring team Žagarėliai to selected ones.
+[INFO ] 2018-04-30 17:06:44.966 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Žagarėliai
+[INFO ] 2018-04-30 17:06:46.900 [JavaFX Application Thread] brainsBeerLogger - Mouse click on TestRound
+[INFO ] 2018-04-30 17:06:48.069 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:06:48.740 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:06:49.322 [JavaFX Application Thread] brainsBeerLogger - Constructing team card map
+[INFO ] 2018-04-30 17:06:49.324 [JavaFX Application Thread] brainsBeerLogger - Constructing team points map
+[INFO ] 2018-04-30 17:06:49.324 [JavaFX Application Thread] brainsBeerLogger - Preparing team cards
+[ERROR] 2018-04-30 17:06:51.045 [JavaFX Application Thread] brainsBeerLogger - exception while loading an image, e = http:\files.softicons.com\download\social-media-icons\simple-icons-by-dan-leech\png\256x256\imdb.png (The filename, directory name, or volume label syntax is incorrect)
+[INFO ] 2018-04-30 17:06:54.460 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:06:54.523 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:06:55.308 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[ERROR] 2018-04-30 17:07:06.885 [JavaFX Application Thread] brainsBeerLogger - exception while loading an image, e = http:\files.softicons.com\download\social-media-icons\simple-icons-by-dan-leech\png\256x256\imdb.png (The filename, directory name, or volume label syntax is incorrect)
+[ERROR] 2018-04-30 17:07:31.837 [JavaFX Application Thread] brainsBeerLogger - exception while loading an image, e = http:\files.softicons.com\download\social-media-icons\simple-icons-by-dan-leech\png\256x256\imdb.png (The filename, directory name, or volume label syntax is incorrect)
+[INFO ] 2018-04-30 17:07:33.668 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:07:33.732 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[ERROR] 2018-04-30 17:07:34.814 [JavaFX Application Thread] brainsBeerLogger - exception while loading an image, e = http:\files.softicons.com\download\social-media-icons\simple-icons-by-dan-leech\png\256x256\imdb.png (The filename, directory name, or volume label syntax is incorrect)
+[INFO ] 2018-04-30 17:07:35.203 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:07:35.243 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[ERROR] 2018-04-30 17:07:36.142 [JavaFX Application Thread] brainsBeerLogger - exception while loading an image, e = http:\files.softicons.com\download\social-media-icons\simple-icons-by-dan-leech\png\256x256\imdb.png (The filename, directory name, or volume label syntax is incorrect)
+[INFO ] 2018-04-30 17:07:36.655 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:07:36.675 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[ERROR] 2018-04-30 17:07:37.837 [JavaFX Application Thread] brainsBeerLogger - exception while loading an image, e = http:\files.softicons.com\download\social-media-icons\simple-icons-by-dan-leech\png\256x256\imdb.png (The filename, directory name, or volume label syntax is incorrect)
+[INFO ] 2018-04-30 17:07:38.236 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:07:38.276 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[ERROR] 2018-04-30 17:07:39.460 [JavaFX Application Thread] brainsBeerLogger - exception while loading an image, e = http:\files.softicons.com\download\social-media-icons\simple-icons-by-dan-leech\png\256x256\imdb.png (The filename, directory name, or volume label syntax is incorrect)
+[INFO ] 2018-04-30 17:07:39.811 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:07:39.860 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:07:40.292 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:07:40.396 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:07:40.757 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:07:40.884 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[ERROR] 2018-04-30 17:07:41.157 [JavaFX Application Thread] brainsBeerLogger - exception while loading an image, e = http:\files.softicons.com\download\social-media-icons\simple-icons-by-dan-leech\png\256x256\imdb.png (The filename, directory name, or volume label syntax is incorrect)
+[INFO ] 2018-04-30 17:07:41.508 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:07:41.548 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:07:42.212 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:07:42.332 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:07:43.460 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:07:43.500 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:07:43.892 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:07:43.981 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[ERROR] 2018-04-30 17:07:44.557 [JavaFX Application Thread] brainsBeerLogger - exception while loading an image, e = http:\files.softicons.com\download\social-media-icons\simple-icons-by-dan-leech\png\256x256\imdb.png (The filename, directory name, or volume label syntax is incorrect)
+[INFO ] 2018-04-30 17:07:44.835 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:07:44.900 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[ERROR] 2018-04-30 17:07:45.973 [JavaFX Application Thread] brainsBeerLogger - exception while loading an image, e = http:\files.softicons.com\download\social-media-icons\simple-icons-by-dan-leech\png\256x256\imdb.png (The filename, directory name, or volume label syntax is incorrect)
+[INFO ] 2018-04-30 17:07:46.315 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:07:46.403 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[ERROR] 2018-04-30 17:07:48.877 [JavaFX Application Thread] brainsBeerLogger - exception while loading an image, e = http:\files.softicons.com\download\social-media-icons\simple-icons-by-dan-leech\png\256x256\imdb.png (The filename, directory name, or volume label syntax is incorrect)
+[ERROR] 2018-04-30 17:07:50.964 [JavaFX Application Thread] brainsBeerLogger - exception while loading an image, e = http:\files.softicons.com\download\social-media-icons\simple-icons-by-dan-leech\png\256x256\imdb.png (The filename, directory name, or volume label syntax is incorrect)
+[ERROR] 2018-04-30 17:07:52.868 [JavaFX Application Thread] brainsBeerLogger - exception while loading an image, e = http:\files.softicons.com\download\social-media-icons\simple-icons-by-dan-leech\png\256x256\imdb.png (The filename, directory name, or volume label syntax is incorrect)
+[ERROR] 2018-04-30 17:07:54.837 [JavaFX Application Thread] brainsBeerLogger - exception while loading an image, e = http:\files.softicons.com\download\social-media-icons\simple-icons-by-dan-leech\png\256x256\imdb.png (The filename, directory name, or volume label syntax is incorrect)
+[INFO ] 2018-04-30 17:07:58.297 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:07:58.343 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:07:59.980 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:08:00.043 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:08:01.269 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:08:01.341 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[ERROR] 2018-04-30 17:08:02.285 [JavaFX Application Thread] brainsBeerLogger - exception while loading an image, e = http:\files.softicons.com\download\social-media-icons\simple-icons-by-dan-leech\png\256x256\imdb.png (The filename, directory name, or volume label syntax is incorrect)
+[INFO ] 2018-04-30 17:08:02.635 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:08:02.667 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:08:03.907 [JavaFX Application Thread] brainsBeerLogger - Closing Blitz window
+[INFO ] 2018-04-30 17:10:14.767 [JavaFX-Launcher] brainsBeerLogger - Loading test data...
+[INFO ] 2018-04-30 17:10:14.768 [JavaFX-Launcher] brainsBeerLogger - Loading test teams data...
+[INFO ] 2018-04-30 17:10:14.846 [JavaFX-Launcher] brainsBeerLogger - Loading test games...
+[INFO ] 2018-04-30 17:10:14.857 [JavaFX-Launcher] brainsBeerLogger - Loading test round types...
+[INFO ] 2018-04-30 17:10:14.866 [JavaFX-Launcher] brainsBeerLogger - Loading test rounds...
+[INFO ] 2018-04-30 17:10:15.129 [JavaFX-Launcher] brainsBeerLogger - Loading test questions...
+[INFO ] 2018-04-30 17:10:31.153 [JavaFX-Launcher] brainsBeerLogger - Downloading 4 images...
+[INFO ] 2018-04-30 17:10:31.153 [pool-4-thread-4] brainsBeerLogger - Downloading image for question nr. 4
+[INFO ] 2018-04-30 17:10:31.153 [pool-4-thread-1] brainsBeerLogger - Downloading image for question nr. 1
+[INFO ] 2018-04-30 17:10:31.153 [pool-4-thread-3] brainsBeerLogger - Downloading image for question nr. 3
+[INFO ] 2018-04-30 17:10:31.153 [pool-4-thread-2] brainsBeerLogger - Downloading image for question nr. 2
+[INFO ] 2018-04-30 17:10:31.449 [pool-4-thread-4] brainsBeerLogger - Downloading task is finished with question nr. 4
+[INFO ] 2018-04-30 17:10:31.449 [pool-4-thread-1] brainsBeerLogger - Downloading task is finished with question nr. 1
+[INFO ] 2018-04-30 17:10:31.458 [pool-4-thread-2] brainsBeerLogger - Downloading task is finished with question nr. 2
+[INFO ] 2018-04-30 17:10:31.458 [pool-4-thread-3] brainsBeerLogger - Downloading task is finished with question nr. 3
+[INFO ] 2018-04-30 17:10:34.253 [JavaFX-Launcher] brainsBeerLogger - Images have been downloaded.
+[INFO ] 2018-04-30 17:10:45.452 [JavaFX Application Thread] brainsBeerLogger - Mouse click on TestRound
+[INFO ] 2018-04-30 17:10:47.605 [JavaFX Application Thread] brainsBeerLogger - Mouse click on TestRound
+[INFO ] 2018-04-30 17:10:47.772 [JavaFX Application Thread] brainsBeerLogger - Transferring round TestRound to selected ones.
+[INFO ] 2018-04-30 17:10:47.774 [JavaFX Application Thread] brainsBeerLogger - Mouse click on TestRound
+[INFO ] 2018-04-30 17:10:48.156 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Kukurūzai
+[INFO ] 2018-04-30 17:10:48.308 [JavaFX Application Thread] brainsBeerLogger - Transferring team Kukurūzai to selected ones.
+[INFO ] 2018-04-30 17:10:48.308 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Kukurūzai
+[INFO ] 2018-04-30 17:10:48.628 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Žagarėliai
+[INFO ] 2018-04-30 17:10:48.780 [JavaFX Application Thread] brainsBeerLogger - Transferring team Žagarėliai to selected ones.
+[INFO ] 2018-04-30 17:10:48.787 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Žagarėliai
+[INFO ] 2018-04-30 17:10:59.684 [JavaFX Application Thread] brainsBeerLogger - Mouse click on TestRound
+[INFO ] 2018-04-30 17:11:02.421 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:11:03.411 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:11:04.273 [JavaFX Application Thread] brainsBeerLogger - Constructing team card map
+[INFO ] 2018-04-30 17:11:04.274 [JavaFX Application Thread] brainsBeerLogger - Constructing team points map
+[INFO ] 2018-04-30 17:11:04.275 [JavaFX Application Thread] brainsBeerLogger - Preparing team cards
+[INFO ] 2018-04-30 17:11:09.604 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:11:09.661 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:11:10.891 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:11:10.971 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:11:12.003 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:11:12.067 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:11:12.843 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:11:12.859 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:11:13.795 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:11:13.867 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:11:15.758 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:11:16.332 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:11:17.555 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:11:17.619 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:11:17.908 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:11:18.419 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:11:18.796 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:11:18.908 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:11:19.636 [JavaFX Application Thread] brainsBeerLogger - Closing Blitz Game...
+[INFO ] 2018-04-30 17:11:27.579 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Imbieriniai Tritaškių princai
+[INFO ] 2018-04-30 17:11:27.723 [JavaFX Application Thread] brainsBeerLogger - Transferring team Imbieriniai Tritaškių princai to selected ones.
+[INFO ] 2018-04-30 17:11:27.724 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Imbieriniai Tritaškių princai
+[INFO ] 2018-04-30 17:11:28.028 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Mėlynieji kebabai
+[INFO ] 2018-04-30 17:11:28.204 [JavaFX Application Thread] brainsBeerLogger - Transferring team Mėlynieji kebabai to selected ones.
+[INFO ] 2018-04-30 17:11:28.205 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Mėlynieji kebabai
+[INFO ] 2018-04-30 17:11:28.508 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Begėdžiai
+[INFO ] 2018-04-30 17:11:28.700 [JavaFX Application Thread] brainsBeerLogger - Transferring team Begėdžiai to selected ones.
+[INFO ] 2018-04-30 17:11:28.701 [JavaFX Application Thread] brainsBeerLogger - Mouse click on Begėdžiai
+[INFO ] 2018-04-30 17:11:32.476 [JavaFX Application Thread] brainsBeerLogger - Mouse click on TestRound
+[INFO ] 2018-04-30 17:11:32.652 [JavaFX Application Thread] brainsBeerLogger - Mouse click on TestRound
+[INFO ] 2018-04-30 17:11:35.195 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:11:36.964 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:11:38.059 [JavaFX Application Thread] brainsBeerLogger - Pressed:E
+[INFO ] 2018-04-30 17:11:38.819 [JavaFX Application Thread] brainsBeerLogger - Pressed:R
+[INFO ] 2018-04-30 17:11:39.931 [JavaFX Application Thread] brainsBeerLogger - Pressed:T
+[INFO ] 2018-04-30 17:11:42.867 [JavaFX Application Thread] brainsBeerLogger - Pressed:T
+[INFO ] 2018-04-30 17:11:44.228 [JavaFX Application Thread] brainsBeerLogger - Pressed:Y
+[INFO ] 2018-04-30 17:11:45.107 [JavaFX Application Thread] brainsBeerLogger - Constructing team card map
+[INFO ] 2018-04-30 17:11:45.108 [JavaFX Application Thread] brainsBeerLogger - Constructing team points map
+[INFO ] 2018-04-30 17:11:45.108 [JavaFX Application Thread] brainsBeerLogger - Preparing team cards
+[INFO ] 2018-04-30 17:11:51.257 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:11:51.293 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:11:51.339 [JavaFX Application Thread] brainsBeerLogger - Pressed:E
+[INFO ] 2018-04-30 17:11:51.397 [JavaFX Application Thread] brainsBeerLogger - Pressed:R
+[INFO ] 2018-04-30 17:11:51.572 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:11:51.572 [JavaFX Application Thread] brainsBeerLogger - Pressed:E
+[INFO ] 2018-04-30 17:11:51.573 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:11:51.603 [JavaFX Application Thread] brainsBeerLogger - Pressed:R
+[INFO ] 2018-04-30 17:11:51.684 [JavaFX Application Thread] brainsBeerLogger - Pressed:T
+[INFO ] 2018-04-30 17:11:51.796 [JavaFX Application Thread] brainsBeerLogger - Pressed:R
+[INFO ] 2018-04-30 17:11:51.797 [JavaFX Application Thread] brainsBeerLogger - Pressed:E
+[INFO ] 2018-04-30 17:11:51.908 [JavaFX Application Thread] brainsBeerLogger - Pressed:T
+[INFO ] 2018-04-30 17:11:52.052 [JavaFX Application Thread] brainsBeerLogger - Pressed:R
+[INFO ] 2018-04-30 17:11:52.052 [JavaFX Application Thread] brainsBeerLogger - Pressed:E
+[INFO ] 2018-04-30 17:11:52.196 [JavaFX Application Thread] brainsBeerLogger - Pressed:T
+[INFO ] 2018-04-30 17:11:52.434 [JavaFX Application Thread] brainsBeerLogger - Pressed:R
+[INFO ] 2018-04-30 17:11:52.660 [JavaFX Application Thread] brainsBeerLogger - Pressed:E
+[INFO ] 2018-04-30 17:11:52.660 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:11:53.228 [JavaFX Application Thread] brainsBeerLogger - Pressed:R
+[INFO ] 2018-04-30 17:11:53.228 [JavaFX Application Thread] brainsBeerLogger - Pressed:E
+[INFO ] 2018-04-30 17:11:53.284 [JavaFX Application Thread] brainsBeerLogger - Pressed:T
+[INFO ] 2018-04-30 17:11:53.691 [JavaFX Application Thread] brainsBeerLogger - Pressed:Y
+[INFO ] 2018-04-30 17:12:15.854 [JavaFX Application Thread] brainsBeerLogger - Pressed:T
+[INFO ] 2018-04-30 17:12:15.989 [JavaFX Application Thread] brainsBeerLogger - Pressed:R
+[INFO ] 2018-04-30 17:12:15.990 [JavaFX Application Thread] brainsBeerLogger - Pressed:E
+[INFO ] 2018-04-30 17:12:16.203 [JavaFX Application Thread] brainsBeerLogger - Pressed:E
+[INFO ] 2018-04-30 17:12:16.243 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:12:16.331 [JavaFX Application Thread] brainsBeerLogger - Pressed:R
+[INFO ] 2018-04-30 17:12:16.460 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:12:16.596 [JavaFX Application Thread] brainsBeerLogger - Pressed:E
+[INFO ] 2018-04-30 17:12:16.688 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:12:16.689 [JavaFX Application Thread] brainsBeerLogger - Pressed:W
+[INFO ] 2018-04-30 17:12:16.996 [JavaFX Application Thread] brainsBeerLogger - Pressed:T
+[INFO ] 2018-04-30 17:12:17.140 [JavaFX Application Thread] brainsBeerLogger - Pressed:Y
+[INFO ] 2018-04-30 17:12:18.079 [JavaFX Application Thread] brainsBeerLogger - Pressed:Q
+[INFO ] 2018-04-30 17:12:30.285 [JavaFX Application Thread] brainsBeerLogger - Closing Blitz Game...

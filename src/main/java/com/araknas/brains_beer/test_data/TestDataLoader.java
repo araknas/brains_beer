@@ -3,6 +3,7 @@ package com.araknas.brains_beer.test_data;
 import com.araknas.brains_beer.models.*;
 import com.araknas.brains_beer.repositories.*;
 import com.araknas.brains_beer.services.ImageService;
+import com.araknas.brains_beer.services.ImportService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,8 @@ public class TestDataLoader {
     QuestionRepository questionRepository;
     @Autowired
     ImageService imageService;
+    @Autowired
+    ImportService importService;
 
     public void loadTestData(){
         try{
@@ -125,9 +128,11 @@ public class TestDataLoader {
         questions.add(new Question(3, "Filmas It pastatytas pagal knygą, kurios autorius yra?", "", "Styvenas Kingas", 30, moviesRound,"https://img00.deviantart.net/f487/i/2017/287/f/f/hela_thor_ragnarok_png_by_gasa979-dblax42.png" ));
         questions.add(new Question(4, "Kiek yra pjūklo dalių?", "", "Per daug", 30, moviesRound, "https://orig00.deviantart.net/4d03/f/2016/162/5/7/superman_w_thor_s_hammer_png_render_by_mrvideo_vidman-da5teet.png" ));
         questions.add(new Question(5, "Kiek yra skambučio dalių (remake)?", "", "Dvi", 30, moviesRound, "https://vignette.wikia.nocookie.net/marvelmovies/images/8/84/Destroyer8-Thor.png/revision/latest?cb=20140208042847" ));
-        imageService.downloadQuestionsImages(questions);
+       // imageService.downloadQuestionsImages(questions);
 
         questionRepository.save(questions);
+
+        importService.importRounds();
 
     }
 }
